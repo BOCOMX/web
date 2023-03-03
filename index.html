@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>BOCO</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="ocultarpreloader" id="top">
+
+  <!--============== PRELOADER ============-->
+  <div class="centrado" id="onload">
+    <div class="lds-ripple"><div></div><div></div></div>
+  </div>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">BOCO</a>
+
+      <nav class="navbar container" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#inicio" class="navbar-link" data-nav-link>Inicio</a>
+          </li>
+
+          <li>
+            <a href="#servicios" class="navbar-link" data-nav-link>Servicios</a>
+          </li>
+
+          <li>
+            <a href="#proyectos" class="navbar-link" data-nav-link>Proyectos</a>
+          </li>
+
+          <li>
+            <a href="#acercade" class="navbar-link" data-nav-link>Acerca de</a>
+          </li>
+
+          <li>
+            <a href="#eventos" class="navbar-link" data-nav-link>Calendario</a>
+          </li>
+
+          <li>
+            <a href="#contacto" class="navbar-link" data-nav-link>Contacto</a>
+          </li>
+
+          <li>
+            <a href="#" class="btn btn-primary">Descargar App móvil</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="inicio" aria-label="inicio">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">BOCO - Adopción y cuidado de mascotas</p>
+
+            <h1 class="h1 hero-title">¡Adopta ahora y llénate de amor!</h1>
+
+            <p class="hero-text">
+              Con BOCO encuentra a tu lomito o michi ideal, te echamos una patita para lograr una adopción segura y los mejores consejos de cuidado.
+            </p>
+
+            <a href="#" class="btn btn-primary">Descargar App móvil</a>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" width="720" height="673" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="servicios" aria-label="servicios">
+        <div class="container">
+
+          <h2 class="h2 section-title">Servicios</h2>
+
+          <p class="section-text">
+            Servicios brindados por la marca BOCO.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #13c4a1">
+                  <ion-icon name="paw"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <p class="card-title">Adopción segura</p>
+                </h3>
+
+                <p class="card-text">
+                  Ofrecemos un servicio de adopción segura, confiable y transparente de mascotas para conectar animales necesitados con hogares felices, calidos y amorosos.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #6610f2">
+                  <ion-icon name="bulb"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <p class="card-title">Consejos de cuidado</p>
+                </h3>
+
+                <p class="card-text">
+                  Podrás obtener orientación en áreas como la nutrición, el ejercicio, la higiene y el comportamiento, para asegurarte de que tu mascota tenga una vida feliz y saludable.
+                </p>
+
+              </div>
+            </li>
+
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #ff612f">
+                  <ion-icon name="bag-handle"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <p class="card-title">Venta de articulos</p>
+                </h3>
+
+                <p class="card-text">
+                  Nuestra tienda en línea ofrece todo lo que necesitas para cuidar a tus mascotas. Desde alimentos y juguetes, hasta ropa y accesorios, contamos con una amplia selección de productos.
+                </p>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+<!-- PREGUNTAS FRECUENTES -->
+
+      <section class="section acordion" aria-label="preguntasfrecuentes">
+        <div class="container">
+          <h2 class="h2 section-title">Preguntas frecuentes</h2>
+          <p class="section-text">
+            Si tienes alguna otra duda ponte en contacto con nosotros.
+          </p> <br>
+          
+          <button class="accordion"><h3>¿Cuál es el proceso de adopción?<ion-icon name="caret-down"></ion-icon></h3></button>
+        <div class="panel">
+        <p>Posterior a la instalación de BOCO el proceso de adopción es el siguiente:</p>
+        <li><p>1.- Encuentra un amigo: En la sección "Adoptar" tendrás diferentes prospectos, elige a tu favorito.</p></li>
+        <li><p>2.- Solicitar adopción: Una vez encuentres a tu mascota ideal, solicita su adopción, llena la información solicitada y envia tu formulario.</p></li>
+        <li><p>3.- Agenda tu entrevista: Es importante que el BOCO-TEAM te conozca y conozca el habitad destinada para la mascota.</p></li>
+        <li><p>4.- Espera la decisión: El BOCO-TEAM analizará la información enviada en tu solicitud con el fin de generar un adopción responsable.</p></li>
+        <li><p>5.- Bienvenido BOCO-AMIGO: Si tu solicitud es aprobada el BOCO-TEAM se comunicará contigo para que puedas recibir al nuevo miembro de tu familia.</p></li>
+        </div>
+
+         <!-- <button class="accordion"><h3>Duda 2<ion-icon name="caret-down"></ion-icon></h3></button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div> -->
+
+        <!-- <button class="accordion"><h3>Duda 3<ion-icon name="caret-down"></ion-icon></h3></button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>-->
+        </div>
+      </section>
+
+      <!-- 
+        - #PROJECT
+      -->
+
+      <section class="section project" id="proyectos" aria-label="proyectos">
+        <div class="container">
+
+          <h2 class="h2 section-title">Últimos proyectos</h2>
+
+          <p class="section-text">
+            Proyectos que cuentan con la participación de BOCO.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
+                  <img src="./assets/images/project-3.jpg" width="510" height="700" loading="lazy"
+                    alt="Proyecto de llantas a camitas" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <p class="card-subtitle">Por Yoel Rocha</p>
+
+                  <h3 class="h3">
+                    <a href="https://www.instagram.com/reel/CooF0goDRLG/" target="_blank" class="card-title">Proyecto De llantas a camitas</a>
+                  </h3>
+
+                  <a href="https://www.instagram.com/reel/CooF0goDRLG/" target="_blank" class="btn btn-primary">Ver detalles</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
+                  <img src="./assets/images/project-2.png" width="510" height="700" loading="lazy"
+                    alt="Rescate de Negra y sus cachorros" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <p class="card-subtitle">Por BOCO</p>
+
+                  <h3 class="h3">
+                    <a href="https://www.instagram.com/reel/Co0zczDD8oZ/" target="_blank" class="card-title">Rescate de Negrita y sus cachorros</a>
+                  </h3>
+
+                  <a href="https://www.instagram.com/reel/Co0zczDD8oZ/" target="_blank" class="btn btn-primary">Ver detalles</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
+                  <img src="./assets/images/project-1.png" width="510" height="700" loading="lazy"
+                    alt="Campaña de esterilización" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <p class="card-subtitle">Por Yoel Rocha</p>
+
+                  <h3 class="h3">
+                    <a href="https://www.facebook.com/YoelFRocha/posts/pfbid027KB2oHE6HghDF6VvXHieAvDn5u2WcTxtqKriX518vgNFpkPVDfpDQ9u2xq8nW9wel" target="_blank" class="card-title">4ta Campaña de esterilización</a>
+                  </h3>
+
+                  <a href="https://www.facebook.com/YoelFRocha/posts/pfbid027KB2oHE6HghDF6VvXHieAvDn5u2WcTxtqKriX518vgNFpkPVDfpDQ9u2xq8nW9wel" target="_blank" class="btn btn-primary">Ver detalles</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="acercade" aria-label="acercade">
+        <div class="container">
+
+          <div class="about-banner img-holder" style="--width: 720; --height: 960;">
+            <img src="./assets/video/trailerbocoapp.jpg" width="720" height="960" loading="lazy" alt="about banner"
+              class="img-cover">
+
+            <button class="play-btn" aria-label="Play video">
+              <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <div class="about-content">
+
+            <h2 class="h2 section-title">Acerca de</h2>
+
+            <p class="section-text">
+              Somos una organización que busca fomentar la adopción de lomitos y michis mediante el uso de las nuevas tecnologías móviles.
+            </p>
+
+            <h3 class="h3">Misión</h3>
+
+            <p class="section-text">
+              Asegurar que la adopción y el cuidado de mascotas sean seguros y accesibles para todos, mediante el uso de herramientas móviles innovadoras.
+            </p>
+
+            <h3 class="h3">Visión</h3>
+
+            <p class="section-text">
+              Ser el servicio líder y más confiable en adopción y cuidado de mascotas, reconocido por nuestra dedicación a la seguridad y el bienestar animal.
+            </p>
+
+            <h3 class="h3">Valores</h3>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Respeto
+                </p>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Honestidad
+                </p>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Confianza
+                </p>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Compromiso
+                </p>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Responsabilidad
+                </p>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="section cta" aria-label="cta" style="background-image: url('./assets/images/cta-bg.jpg')">
+        <div class="container">
+
+          <p class="cta-subtitle">¿Te agrada BOCO?</p>
+
+          <h2 class="h2 section-title">¡Apoyanos! Tu donativo es importante</h2>
+
+          <a class="btn btn-secondary">Donar</a>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="eventos" aria-label="blog">
+        <div class="container">
+
+          <h2 class="h2 section-title">Proximas actividades</h2>
+
+          <p class="section-text">
+            Aquí podrás enterarte de los próximos eventos y actividades.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
+                  <img src="./assets/images/blog-2.png" width="860" height="646" loading="lazy"
+                    alt="De llantas a camitas" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2023-03-00">Del 20 al 26 de Marzo, 2023</time>
+
+                  <h3 class="h3">
+                    <a href="https://www.instagram.com/reel/CooF0goDRLG/" target="_blank" class="card-title">De llantas a camitas</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card grid">
+
+                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
+                  <img src="./assets/images/blog-4.jpg" width="860" height="646" loading="lazy"
+                    alt="6ta Campaña de esterilización" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2023-03-00">3ra Semana de Marzo, 2023</time>
+
+                  <h3 class="h3">
+                    <a class="card-title">6ta Campaña de esterilización</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <!--<li>
+              <div class="blog-card grid">
+
+                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
+                  <img src="./assets/images/blog-4.jpg" width="860" height="646" loading="lazy"
+                    alt="3 Ways to Get Client Approval for Scope Changes" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">3 Ways to Get Client Approval for Scope Changes</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card grid">
+
+                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
+                  <img src="./assets/images/blog-5.jpg" width="860" height="646" loading="lazy"
+                    alt="Top 21 Must-Read Blogs For Creative Agencies" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Top 21 Must-Read Blogs For Creative Agencies</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>-->
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CONTACT
+      -->
+
+      <section class="section contact" id="redes" aria-label="redes">
+        <div class="container">
+
+          <h2 class="h2 section-title">Redes sociales</h2>
+
+          <p class="section-text">
+            Nuestras redes sociales oficiales
+          </p>
+
+          <ul class="contact-list">
+
+                        <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Facebook</h3>
+
+                  <a href="https://www.facebook.com/profile.php?id=100090362104756" target="_blank" class="card-link">BOCO</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Instagram</h3>
+
+                  <a href="https://www.instagram.com/_boco_mx/" target="_blank" class="card-link">_boco_mx</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="logo-tiktok"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">TikTok</h3>
+
+                  <a href="https://www.tiktok.com/@bocomx" target="_blank" class="card-link">bocomx</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </section>
+
+      <section class="section contact" id="contacto" aria-label="contacto">
+        <div class="container">
+
+          <h2 class="h2 section-title">Contacta con nosotros</h2>
+
+          <p class="section-text">
+            Lunes a Viernes 08:00 a.m. - 08:00 p.m.
+          </p>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Gmail</h3>
+
+                  <a href="mailto:bocomx.oficial@gmail.com" target="_blank" class="card-link">bocomx.oficial@gmail.com</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Télefono</h3>
+
+                  <a href="tel:2941399983" class="card-link">294 139 9983</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">WhatsApp</h3>
+
+                  <a href="https://wa.me/+522941399983" target="_blank" class="card-link">(+52) 294 139 9983</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+        
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <p class="copyright"> BOCO
+        &copy; 2023 Todos los derechos reservados. </p>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" aria-label="back to top" data-back-top-btn class="back-top-btn">
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- PRELOADER QUERY -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="./assets/js/preloader.js"></script>
+
+</body>
+
+</html>
