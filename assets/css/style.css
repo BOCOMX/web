@@ -399,7 +399,7 @@ body {
   color: var(--eerie-black);
   font-family: var(--ff-league-spartan);
   font-size: var(--fs-4);
-  line-height: 1.2;
+  
   padding-block: 8px;
   transition: var(--transition-1);
 }
@@ -409,7 +409,14 @@ body {
 .header .btn { margin-block-start: 10px; }
 
 
-
+.active-link {
+  color: var(--red-crayola);
+  font-family: var(--ff-league-spartan);
+  font-size: var(--fs-4);
+  
+  padding-block: 8px;
+  transition: var(--transition-1);
+}
 
 
 /*-----------------------------------*\
