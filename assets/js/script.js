@@ -1,90 +1,204 @@
-/*==================== PRELOADER Y LLEVAR PÁGINA ARRIBA AL RECARGAR ====================*/
-window.addEventListener('load', () => {
-  const centrado = document.querySelector('.centrado');
-  centrado.style.opacity = 0;
-  centrado.style.visibility = 'hidden';
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 250);
-});
+/*==================== HERO & LOGO CAROUSEL ====================*/
 
-'use strict';
+document.addEventListener('DOMContentLoaded', function () {
 
-/**
- * add event on element
- */
-
-const addEventOnElem = function (elem, type, callback) {
-  if (elem.length > 1) {
-    for (let i = 0; i < elem.length; i++) {
-      elem[i].addEventListener(type, callback);
-    }
-  } else {
-    elem.addEventListener(type, callback);
+  // Hero Slider
+  if (typeof Swiper !== 'undefined' && document.querySelector('.hero-slider')) {
+    const heroSlider = new Swiper('.hero-slider', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
   }
-}
 
-
-
-/**
- * toggle navbar
- */
-
-const navbar = document.querySelector("[data-navbar]");
-const navbarLinks = document.querySelectorAll("[data-nav-link]");
-const navToggler = document.querySelector("[data-nav-toggler]");
-
-const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  navToggler.classList.toggle("active");
-}
-
-addEventOnElem(navToggler, "click", toggleNavbar);
-
-const closeNavbar = function () {
-  navbar.classList.remove("active");
-  navToggler.classList.remove("active");
-}
-
-addEventOnElem(navbarLinks, "click", closeNavbar);
-
-
-
-/**
- * header active
- */
-
-const header = document.querySelector("[data-header]");
-const backTopBtn = document.querySelector("[data-back-top-btn]");
-
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
-    header.classList.add("active");
-    backTopBtn.classList.add("active");
-  } else {
-    header.classList.remove("active");
-    backTopBtn.classList.remove("active");
-  }
-});
-
-/* ACORDION */
-var acc = document.getElementsByClassName("accordion");
-var i;
-var currentAccordion = null;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    if (currentAccordion && currentAccordion != this) {
-      currentAccordion.classList.remove("activeacordion");
-      currentAccordion.nextElementSibling.style.display = "none";
+  // Projects Slider responsivo
+  let projectsSlider;
+  function initProjectsSlider() {
+    if (typeof Swiper === 'undefined' || !document.querySelector('.projects-slider')) return;
+    // Asegura que el div de paginación exista
+    const slider = document.querySelector('.projects-slider');
+    if (slider && !slider.querySelector('.swiper-pagination')) {
+      const pagDiv = document.createElement('div');
+      pagDiv.className = 'swiper-pagination';
+      slider.appendChild(pagDiv);
     }
-    this.classList.toggle("activeacordion");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    if (window.innerWidth <= 768) {
+      if (projectsSlider) projectsSlider.destroy(true, true);
+      projectsSlider = new Swiper('.projects-slider', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: '.projects-slider .swiper-pagination',
+          clickable: true,
+        },
+        navigation: false,
+        allowTouchMove: true,
+      });
     } else {
-      panel.style.display = "block";
+      if (projectsSlider) projectsSlider.destroy(true, true);
+      projectsSlider = new Swiper('.projects-slider', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.projects-section .swiper-button-next',
+          prevEl: '.projects-section .swiper-button-prev',
+        },
+        pagination: {
+          el: '.projects-slider .swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+        }
+      });
     }
-    currentAccordion = this;
+  }
+  initProjectsSlider();
+  window.addEventListener('resize', () => {
+    initProjectsSlider();
   });
-}
+
+  // Project Gallery Filtering
+  const filterContainer = document.querySelector('.project-filters');
+  const galleryItems = document.querySelectorAll('.project-gallery-grid .project-card');
+
+  const filterItems = (filterValue) => {
+    galleryItems.forEach(item => {
+      if (item.getAttribute('data-category') === filterValue) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  };
+
+  if (filterContainer && galleryItems.length > 0) {
+    // Set initial filter to 'proyectos' on page load
+    filterItems('proyectos');
+
+    filterContainer.addEventListener('click', (event) => {
+      if (event.target.classList.contains('filter-btn')) {
+        // Deactivate existing active button
+        filterContainer.querySelector('.active').classList.remove('active');
+        // Activate new button
+        event.target.classList.add('active');
+
+        const filterValue = event.target.getAttribute('data-filter');
+        filterItems(filterValue);
+      }
+    });
+  }
+
+  // Services Slider solo en móviles
+  if (typeof Swiper !== 'undefined' && window.innerWidth <= 768 && document.querySelector('.services-slider')) {
+    new Swiper('.services-slider', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: '.services-slider .swiper-button-next',
+        prevEl: '.services-slider .swiper-button-prev',
+      },
+      pagination: {
+        el: '.services-slider .swiper-pagination',
+        clickable: true,
+      },
+      loop: false,
+      allowTouchMove: true,
+    });
+  }
+
+  // === MENÚ MÓVIL ===
+  const menuBtn = document.querySelector('header button[aria-label="Toggle menu"]');
+  let mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+
+  if (menuBtn) {
+    if (!mobileMenuOverlay) {
+      // Crear overlay si no existe
+      mobileMenuOverlay = document.createElement('div');
+      mobileMenuOverlay.className = 'mobile-menu-overlay closed';
+      mobileMenuOverlay.innerHTML = `
+        <nav class="mobile-menu-list">
+          <a href="index.html#inicio" class="mobile-menu-link">Inicio</a>
+          <a href="acercade.html" class="mobile-menu-link">Nosotros</a>
+          <a href="proyectos.html" class="mobile-menu-link">Proyectos</a>
+          <a href="blog.html" class="mobile-menu-link">Blog</a>
+          <a href="contacto.html" class="mobile-menu-link">Contacto</a>
+        </nav>
+        <button class="mobile-menu-close" aria-label="Cerrar menú"><i class="ri-close-line"></i></button>
+      `;
+      document.body.appendChild(mobileMenuOverlay);
+    }
+    // Lógica para submenú móvil
+    const dropdownToggle = mobileMenuOverlay.querySelector('.mobile-menu-dropdown-toggle');
+    const dropdownMenu = mobileMenuOverlay.querySelector('.mobile-menu-dropdown-menu');
+    if (dropdownToggle && dropdownMenu) {
+      dropdownToggle.addEventListener('click', function() {
+        const expanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+        dropdownToggle.setAttribute('aria-expanded', !expanded);
+        dropdownMenu.hidden = expanded;
+      });
+    }
+    // Abrir menú
+    menuBtn.addEventListener('click', function() {
+      mobileMenuOverlay.classList.remove('closed');
+      document.body.style.overflow = 'hidden';
+      // Cerrar submenú siempre al abrir el menú móvil
+      const dropdownToggle = mobileMenuOverlay.querySelector('.mobile-menu-dropdown-toggle');
+      const dropdownMenu = mobileMenuOverlay.querySelector('.mobile-menu-dropdown-menu');
+      if (dropdownToggle && dropdownMenu) {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.hidden = true;
+      }
+    });
+    // Cerrar menú
+    mobileMenuOverlay.querySelector('.mobile-menu-close').addEventListener('click', function() {
+      mobileMenuOverlay.classList.add('closed');
+      document.body.style.overflow = '';
+    });
+    // Cerrar al hacer click fuera del menú
+    mobileMenuOverlay.addEventListener('click', function(e) {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.add('closed');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // Ocultar overlay si cambia a escritorio
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && mobileMenuOverlay && !mobileMenuOverlay.classList.contains('closed')) {
+      mobileMenuOverlay.classList.add('closed');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Galería de fotos en detalles de proyecto (solo móvil)
+  if (typeof Swiper !== 'undefined' && document.querySelector('.pd-gallery-slider')) {
+    new Swiper('.pd-gallery-slider', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      pagination: {
+        el: '.pd-gallery-slider .swiper-pagination',
+        clickable: true,
+      },
+      navigation: false,
+      loop: false,
+      allowTouchMove: true,
+    });
+  }
+
+});
