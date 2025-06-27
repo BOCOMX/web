@@ -7,6 +7,9 @@ local_backend: true
 media_folder: "assets/images/blog"
 public_folder: "/assets/images/blog"
 
+# Configuración responsive para móviles
+display_url: https://boco-web.netlify.app
+
 collections:
   - name: "blog"
     label: "Blog Posts"
@@ -15,14 +18,15 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog-post"}
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Autor", name: "author", widget: "string"}
-      - {label: "Imagen de Portada", name: "cover_image", widget: "image"}
-      - {label: "Imagen Principal", name: "main_image", widget: "image"}
-      - {label: "Imagen 2", name: "image_2", widget: "image", required: false}
-      - {label: "Extracto", name: "excerpt", widget: "text"}
-      - {label: "Contenido", name: "body", widget: "markdown"}
+      - {label: "Título del Blog", name: "title", widget: "string", hint: "Título principal del artículo"}
+      - {label: "Fecha de Publicación", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, hint: "Selecciona solo la fecha (sin hora)"}
+      - {label: "Autor", name: "author", widget: "string", hint: "Nombre del autor del artículo"}
+      - {label: "Avatar del Autor", name: "author_avatar", widget: "image", hint: "Imagen cuadrada 100x100px del autor"}
+      - {label: "Imagen Principal (800x500px)", name: "main_image", widget: "image", hint: "Imagen principal del blog - ideal 800x500px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
+      - {label: "Imagen 2 (1200x600px)", name: "image_2", widget: "image", required: false, hint: "Segunda imagen del blog - ideal 1200x600px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
+      - {label: "Miniatura (400x300px)", name: "thumbnail", widget: "image", hint: "Miniatura para listas - ideal 400x300px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
+      - {label: "Extracto", name: "excerpt", widget: "text", hint: "Resumen corto del blog (aparece en listas)"}
+      - {label: "Contenido del Blog", name: "body", widget: "markdown", hint: "Contenido completo del blog en formato Markdown"}
 
   - name: "proyectos"
     label: "Proyectos"
@@ -31,9 +35,43 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "project-details"}
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Imagen Principal", name: "main_image", widget: "image"}
-      - {label: "Galería de Fotos", name: "gallery", widget: "list", fields: [{label: "Imagen", name: "image", widget: "image"}]}
-      - {label: "Descripción", name: "description", widget: "markdown"}
-      - {label: "Participantes", name: "participants", widget: "list", fields: [{label: "Nombre", name: "name", widget: "string"}, {label: "Avatar", name: "avatar", widget: "image"}]}
+      - {label: "Título del Proyecto", name: "title", widget: "string", hint: "Nombre del proyecto"}
+      - {label: "Imagen Principal (1920x500px)", name: "main_image", widget: "image", hint: "Imagen de portada del proyecto - ideal 1920x500px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
+      - {label: "Miniatura (510x600px)", name: "thumbnail", widget: "image", hint: "Miniatura para listas - ideal 510x600px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
+      - {label: "Galería de Fotos", name: "gallery", widget: "list", hint: "Agrega fotos del proyecto (ideal 640x300px cada una)", fields: [{label: "Foto", name: "image", widget: "image", hint: "Foto del proyecto - ideal 640x300px"}]}
+      - {label: "Descripción del Proyecto", name: "description", widget: "markdown", hint: "Descripción completa del proyecto"}
+      - {label: "Participantes", name: "participants", widget: "list", hint: "Personas que participaron en el proyecto", fields: [{label: "Nombre", name: "name", widget: "string"}, {label: "Avatar (100x100px)", name: "avatar", widget: "image", hint: "Foto del participante - ideal 100x100px"}]}
+
+# Configuración de medios para recorte de imágenes
+media_library:
+  name: netlify
+  config:
+    default_transformations:
+      - quality: 80
+        width: 800
+        height: 500
+        crop: "fit"
+      - quality: 80
+        width: 1200
+        height: 600
+        crop: "fit"
+      - quality: 80
+        width: 400
+        height: 300
+        crop: "fit"
+      - quality: 80
+        width: 1920
+        height: 500
+        crop: "fit"
+      - quality: 80
+        width: 510
+        height: 600
+        crop: "fit"
+      - quality: 80
+        width: 640
+        height: 300
+        crop: "fit"
+      - quality: 80
+        width: 100
+        height: 100
+        crop: "fit"
