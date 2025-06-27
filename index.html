@@ -10,819 +10,479 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>BOCO</title>
+  <meta name="description" content="¡Adopta ahora y llénate de amor! Encuentra a tu compañero y amigo ideal, te echamos una patita para lograr una adopción segura y los mejores consejos de cuidado.">
+  <meta name="keywords" content="adopción responsable, cuidado animal, bienestar animal, app de adopciones, adopta una mascota, BOCO, plataforma de adopción, mascotas en adopción, comunidad animalista, proteger animales">
 
-  <!-- 
-    - favicon
-  -->
+  <!-- favicon -->
   <link rel="icon" href="icons/icon-512x512.png" />
 
-        <!--==================== IMAGEN VISTA PREVIA ====================-->
-        <meta property="og:image" content="https://bocomx.github.io/web/assets/images/og-image.png">
+  <!--==================== IMAGEN VISTA PREVIA ====================-->
+  <meta property="og:image" content="assets/images/preview/Inicio.png">
 
-        <!--==================== DESCRIPCIÓN ====================-->
-        <meta property="og:description" content="Te echamos una patita para lograr una adopción segura y los mejores consejos de cuidado.">
+  <!--==================== TÍTULO ====================-->
+  <meta property="og:title" content="BOCO: Adopción responsable y cuidado animal">
+
+  <!--==================== DESCRIPCIÓN ====================-->
+  <meta property="og:description" content="Te echamos una patita para lograr una adopción segura y los mejores consejos de cuidado.">
     
-        <!--==================== TÍTULO ====================-->
-        <meta property="og:title" content="BOCO: Adopción responsable y cuidado animal">
 
-  <!-- 
-    - custom css link
-  -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
 
+  <!-- Remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet">
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body class="ocultarpreloader" id="top">
+<body>
 
-  <!--============== PRELOADER ============-->
-  <div class="centrado" id="onload">
-    <div class="lds-ripple"><div></div><div></div></div>
-  </div>
+  <!-- #MENU -->
 
-  <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <a href="https://bocomx.github.io/web/" class="logo">BOCO</a>
-
-      <nav class="navbar container" data-navbar>
-        <ul class="navbar-list">
-
-          <li>
-            <a href="#inicio" class="navbar-link" data-nav-link>Inicio</a>
+  <header>
+    <div>
+      <a href="index.html" class="logo">BOCO</a>
+      <nav>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Nosotros <i class="ri-arrow-down-s-line"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="acercade.html">Acerca de</a></li>
+              <li><a href="proyectos.html">Proyectos</a></li>
+            </ul>
           </li>
-
-          <li>
-            <a href="#servicios" class="navbar-link" data-nav-link>Servicios</a>
-          </li>
-
-          <li>
-            <a href="#proyectos" class="navbar-link" data-nav-link>Proyectos</a>
-          </li>
-
-          <li>
-            <a href="#acercade" class="navbar-link" data-nav-link>Acerca de</a>
-          </li>
-
-          <li>
-            <a href="#eventos" class="navbar-link" data-nav-link>Calendario</a>
-          </li>
-
-          <li>
-            <a href="#contacto" class="navbar-link" data-nav-link>Contacto</a>
-          </li>
-
-          <li>
-            <a href="https://bocomx.github.io/app/" target="_blank" class="btn btn-primary">Descargar App</a>
-          </li>
-
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
-
-      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
-        <ion-icon name="menu-outline" class="open"></ion-icon>
-        <ion-icon name="close-outline" class="close"></ion-icon>
+      <button aria-label="Toggle menu">
+        <i class="ri-menu-line"></i>
       </button>
-
     </div>
   </header>
-
-
-
-
 
   <main>
     <article>
 
-      <!-- 
-        - #HERO
-      -->
+      <!-- #HERO -->
 
-      <section class="section hero" id="inicio" aria-label="inicio">
-        <div class="container">
-
+      <section id="inicio" class="hero-section" aria-label="inicio">
           <div class="hero-content">
-
-            <p class="hero-subtitle">BOCO - Adopción responsable y cuidado animal</p>
-
-            <h1 class="h1 hero-title">¡Adopta ahora y llénate de amor!</h1>
-
-            <p class="hero-text">
-              Encuentra a tu compañero y amigo ideal, te echamos una patita para lograr una adopción segura y los mejores consejos de cuidado.
-            </p>
-
-            <a href="https://bocomx.github.io/app/" target="_blank" class="btn btn-primary">¡Descargar ahora!</a> <!--CAMBIAR p POR a PARA DAR LINK-->
-
+          <h1>¡Adopta ahora y llénate de amor!</h1>
+          <p>Encuentra a tu compañero y amigo ideal, te echamos una patita para lograr una adopción segura y los mejores consejos de cuidado.</p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">¡Adoptar ahora!</a>
+            <a href="#" class="btn btn-secondary">
+              <i class="ri-play-circle-line"></i>
+              Ver Video
+            </a>
           </div>
-
-          <figure class="hero-banner">
-            <img src="./assets/images/hero-banner.png" width="720" height="673" alt="hero banner" class="w-100">
-          </figure>
-
-        </div>
-      </section>
-
-      <!-- 
-        - #SERVICE
-      -->
-
-      <section class="section service" id="servicios" aria-label="servicios">
-        <div class="container">
-
-          <h2 class="h2 section-title">Servicios</h2>
-
-          <p class="section-text">
-            Servicios brindados por la marca BOCO
-          </p>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon" style="background-color: #13c4a1">
-                  <ion-icon name="paw"></ion-icon>
-                </div>
-
-                <h3 class="h3">
-                  <p class="card-title">Adopción segura</p>
-                </h3>
-
-                <p class="card-text">
-                  Ofrecemos un servicio de adopción segura, confiable y transparente de mascotas para conectar animales necesitados con hogares felices, calidos y amorosos.
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon" style="background-color: #6610f2">
-                  <ion-icon name="bulb"></ion-icon>
-                </div>
-
-                <h3 class="h3">
-                  <p class="card-title">Consejos de cuidado</p>
-                </h3>
-
-                <p class="card-text">
-                  Podrás obtener orientación en áreas como la nutrición, el ejercicio, la higiene y el comportamiento, para asegurarte de que tu mascota tenga una vida feliz y saludable.
-                </p>
-
-              </div>
-            </li>
-
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon" style="background-color: #ff612f">
-                  <ion-icon name="bag-handle"></ion-icon>
-                </div>
-
-                <h3 class="h3">
-                  <p class="card-title">Venta de articulos</p>
-                </h3>
-
-                <p class="card-text">
-                  Nuestra tienda en línea ofrece todo lo que necesitas para cuidar a tus mascotas. Desde alimentos y juguetes, hasta ropa y accesorios, contamos con una amplia selección de productos.
-                </p>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-<!-- PREGUNTAS FRECUENTES -->
-
-      <section class="section acordion" aria-label="preguntasfrecuentes">
-        <div class="container">
-          <h2 class="h2 section-title">Preguntas frecuentes</h2>
-          <p class="section-text">
-            Si tienes alguna otra duda ponte en contacto con nosotros
-          </p> <br>
-          
-          <button class="accordion"><h3>¿Cuál es el proceso de adopción?<ion-icon name="caret-down"></ion-icon></h3></button>
-        <div class="panel">
-        <p>Posterior a la instalación de BOCO el proceso de adopción es el siguiente:</p>
-        <li><p>1.- Encuentra un amigo: En la sección "Adoptar" tendrás diferentes prospectos, elige a tu favorito.</p></li>
-        <li><p>2.- Solicitar adopción: Una vez encuentres a tu mascota ideal, solicita su adopción, llena la información solicitada y envia tu formulario.</p></li>
-        <li><p>3.- Agenda tu entrevista: Es importante que el BOCO-TEAM te conozca y conozca el habitad destinada para la mascota.</p></li>
-        <li><p>4.- Espera la decisión: El BOCO-TEAM analizará la información enviada en tu solicitud con el fin de generar un adopción responsable.</p></li>
-        <li><p>5.- Bienvenido BOCO-AMIGO: Si tu solicitud es aprobada el BOCO-TEAM se comunicará contigo para que puedas recibir al nuevo miembro de tu familia.</p></li>
-        </div>
-
-         <!-- <button class="accordion"><h3>Duda 2<ion-icon name="caret-down"></ion-icon></h3></button>
-        <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div> -->
-
-        <!-- <button class="accordion"><h3>Duda 3<ion-icon name="caret-down"></ion-icon></h3></button>
-        <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>-->
-        </div>
-      </section>
-
-      <!-- 
-        - #PROJECT
-      -->
-
-      <section class="section project" id="proyectos" aria-label="proyectos">
-        <div class="container">
-
-          <h2 class="h2 section-title">Nuestros Proyectos</h2>
-
-          <p class="section-text">
-            Actividades que cuentan con la participación de BOCO
-          </p>
-
-          <ul class="grid-list">
-
-            <!-- CAMPAÑAS DE ESTERILIZACIÓN -->
-            <li>
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
-                  <img src="./assets/images/910vacampaña.jpeg" width="510" height="700" loading="lazy"
-                    alt="6ta Campaña de esterilización" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <p class="card-subtitle">Por Yoel Rocha, BOCO & Veterinaria la Granja</p>
-
-                  <h3 class="h3">
-                    <a href="campañasdeesterilizacion.html" class="card-title">Campañas de esterilización</a>
-                  </h3>
-
-                  <a href="campañasdeesterilizacion.html" class="btn btn-primary">Ver más</a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <!-- NOTA AL DÍA NOTICIAS -->
-            <li>
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
-                  <img src="./assets/images/noti.jpeg" width="510" height="700" loading="lazy"
-                    alt="6ta Campaña de esterilización" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <p class="card-subtitle">Por Abigail, Al Día Noticias</p>
-
-                  <h3 class="h3">
-                    <a href="https://www.facebook.com/aldianoticiasmx/posts/pfbid02Tr8thqdGTHYRQijVG5L3QtAAWAjmYf7j1pjFTQdVTm3Mw2LCChZjZ8sw3iC9m9BZl" target="_blank" class="card-title">Día mundial de los animales 2023: BOCO</a>
-                  </h3>
-
-                  <a href="https://www.facebook.com/aldianoticiasmx/posts/pfbid02Tr8thqdGTHYRQijVG5L3QtAAWAjmYf7j1pjFTQdVTm3Mw2LCChZjZ8sw3iC9m9BZl" target="_blank" class="btn btn-primary">Ver post</a>
-
-                </div>
-
-              </div>
-            </li>
-
-
-            <!-- CAMPAÑAS DE VACUNACIÓN ANTIRRÁBICA -->
-            <li>
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
-                  <img src="./assets/images/campvac2.jpeg" width="510" height="700" loading="lazy"
-                    alt="6ta Campaña de esterilización" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <p class="card-subtitle">Por Yoel Rocha, Jedet Ixba, BOCO & Veterinaria la Granja</p>
-
-                  <h3 class="h3">
-                    <a href="campañasdevacunacion.html" class="card-title">Campañas de vacunación</a>
-                  </h3>
-
-                  <a href="campañasdevacunacion.html" class="btn btn-primary">Ver más</a>
-
-                </div>
-
-              </div>
-            </li>
-
-
-            <!-- CAMPAÑAS DE ADOPCIÓN -->
-            <li>
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
-                  <img src="./assets/images/campadop.jpeg" width="510" height="700" loading="lazy"
-                    alt="6ta Campaña de esterilización" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <!--<p class="card-subtitle">Por Carol & BOCO</p>-->
-
-                  <h3 class="h3">
-                    <a href="campañasdeadopcion.html" class="card-title">Campañas de adopción</a>
-                  </h3>
-
-                  <a href="campañasdeadopcion.html" class="btn btn-primary">Ver más</a>
-
-                </div>
-
-              </div>
-            </li>
-            
-
-            <!-- DE LLANTAS A CAMITAS -->
-            <li>
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
-                  <img src="./assets/images/project-3.jpg" width="510" height="700" loading="lazy"
-                    alt="Proyecto de llantas a camitas" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <p class="card-subtitle">Por Yoel Rocha</p>
-
-                  <h3 class="h3">
-                    <a href="https://www.instagram.com/reel/CooF0goDRLG/" target="_blank" class="card-title">Proyecto De llantas a camitas</a>
-                  </h3>
-
-                  <a href="https://www.instagram.com/reel/CooF0goDRLG/" target="_blank" class="btn btn-primary">Ver detalles</a>
-
-                </div>
-
-              </div>
-            </li>
-
-
-            <!--RESCATE ANIMAL -->
-            <li>
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
-                  <img src="./assets/images/project-2.png" width="510" height="700" loading="lazy"
-                    alt="Rescate de Negritaa y sus cachorros" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <!--<p class="card-subtitle">Por BOCO</p>-->
-
-                  <h3 class="h3">
-                    <a href="rescateanimal.html" class="card-title">Rescate y cuidado animal</a>
-                  </h3>
-
-                  <a href="rescateanimal.html" class="btn btn-primary">Ver más</a>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #ACERCA DE
-      -->
-
-      <section class="section about" id="acercade" aria-label="acercade">
-        <div class="container">
-
-          
-
-          <div class="about-content">
-
-            <h2 class="h2 section-title">Acerca de</h2>
-
-            <p class="section-text">
-              Somos una organización que busca fomentar la adopción y el cuidado animal mediante el uso de las nuevas tecnologías móviles.
-            </p>
-
-            <h3 class="h3">Misión</h3>
-
-            <p class="section-text">
-              Asegurar que la adopción y el cuidado de mascotas sean seguros y accesibles para todos, mediante el uso de herramientas móviles innovadoras.
-            </p>
-
-            <h3 class="h3">Visión</h3>
-
-            <p class="section-text">
-              Ser el servicio líder y más confiable en adopción y cuidado de mascotas, reconocido por nuestra dedicación a la seguridad y el bienestar animal.
-            </p>
-
-            <h3 class="h3">Valores</h3>
-
-            <ul class="about-list">
-
-              <li class="about-item">
-                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-
-                <p class="section-text">
-                  Respeto
-                </p>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-
-                <p class="section-text">
-                  Honestidad
-                </p>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-
-                <p class="section-text">
-                  Confianza
-                </p>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-
-                <p class="section-text">
-                  Compromiso
-                </p>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-
-                <p class="section-text">
-                  Responsabilidad
-                </p>
-              </li>
-
-            </ul>
-
+          <div class="hero-trusted">
+            <p>Más de 25 adopciones responsables</p>
+            <div class="adopter-avatars">
+              <img src="assets/images/avatares/adopcion/1.png" alt="Adoptante 1">
+              <img src="assets/images/avatares/adopcion/2.png" alt="Adoptante 2">
+              <img src="assets/images/avatares/adopcion/3.png" alt="Adoptante 3">
+            </div>
           </div>
-
+        </div>
+        <div class="hero-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/images/perrofeliz.png" alt="hero banner 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/gatos.png" alt="hero banner 2">
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
-
-
-
-
-      <!-- 
-        - #CTA
-      -->
-
-      <section class="section cta" aria-label="cta" style="background-image: url('./assets/images/cta-bg.jpg')">
-        <div class="container">
-
-          <p class="cta-subtitle">¿Te agrada BOCO?</p>
-
-          <h2 class="h2 section-title">¡Apoyanos! Forma parte de esta iniciativa</h2>
-
-          <a href="https://www.facebook.com/profile.php?id=61552034053932" target="_blank" class="btn btn-secondary">Enviar Mensaje</a>
-
+      <!-- #ALIADOS -->
+      <section class="allies-section" aria-label="Patrocinadores y Aliados">
+        <h2 class="section-title">Patrocinadores y Aliados</h2>
+        <div class="allies-grid allies-grid-fixed">
+          <!-- Ally Card 1 -->
+          <a href="https://fabiansoar27.github.io/portafolio/" target="_blank" rel="noopener" class="ally-link">
+            <div class="ally-card" style="--ally-bg: #870505;">
+              <img src="assets/images/patrocinadores y aliados/Fabiansoar.svg" alt="Lenovo">
+            </div>
+          </a>
+          <!-- Ally Card 2 -->
+          <a href="https://www.facebook.com/jedetmua" target="_blank" rel="noopener" class="ally-link">
+            <div class="ally-card" style="--ally-bg: #eef2fd;">
+              <img src="assets/images/patrocinadores y aliados/JedetMUA.svg" alt="Slack">
+            </div>
+          </a>
+          <!-- Ally Card 3 -->
+          <a href="https://www.facebook.com/profile.php?id=61564964613791" target="_blank" rel="noopener" class="ally-link">
+            <div class="ally-card" style="--ally-bg: #f0eefd;">
+              <img src="assets/images/patrocinadores y aliados/Eclipsa.svg" alt="Shopify">
+            </div>
+          </a>
         </div>
       </section>
 
+      <!-- #SERVICIOS -->
 
+      <section class="services-section-alt">
+        <h2 class="section-title">Servicios</h2>
+        <p class="section-subtitle">Servicios brindados por BOCO para el bienestar de tu mascota.</p>
 
+        <div class="service-cards-container">
+          <!-- Card 1 -->
+          <div class="service-card-alt">
+            <i class="ri-heart-line"></i>
+            <h3>Adopción responsable</h3>
+            <p>Ofrecemos un servicio de adopción seguro, confiable y transparente para conectar animales con hogares amorosos.</p>
+            <!-- <a href="#" class="btn-card">
+              <span>Saber más</span>
+              <i class="ri-arrow-right-line"></i>
+            </a> -->
+          </div>
+          <!-- Card 2 -->
+          <div class="service-card-alt">
+            <i class="ri-lightbulb-line"></i>
+            <h3>Consejos de cuidado</h3>
+            <p>Orientación en nutrición, ejercicio y comportamiento para asegurar que tu mascota tenga una vida feliz y saludable.</p>
+            <a href="blog.html" class="btn-card">
+              <span>Saber más</span>
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+          <!-- Card 3 -->
+          <div class="service-card-alt">
+            <i class="ri-shopping-bag-line"></i>
+            <h3>Venta de artículos</h3>
+            <p>Nuestra tienda en línea ofrece todo lo que necesitas para cuidar a tus mascotas, desde alimento hasta accesorios.</p>
+            <!-- <a href="#" class="btn-card">
+              <span>Saber más</span>
+              <i class="ri-arrow-right-line"></i>
+            </a> -->
+            <a class="btn-card">
+              <span>¡Próximamente!</span>
+            </a>
+          </div>
+        </div>
 
-
-      <!-- 
-        - #BLOG
-      -->
-
-      <section class="section blog" id="eventos" aria-label="blog">
-        <div class="container">
-
-          <h2 class="h2 section-title">Proximas actividades</h2>
-
-          <p class="section-text">
-            ¡Enterarte de los próximos eventos y actividades!
-          </p>
-
-          <ul class="grid-list">
-
-           <!-- <li>
-              <div class="blog-card grid">
-
-                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
-                  <img src="./assets/images/blog-2.png" width="860" height="646" loading="lazy"
-                    alt="De llantas a camitas" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <time class="time" datetime="2023-03-00">Del 20 al 26 de Marzo, 2023</time>
-
-                  <h3 class="h3">
-                    <a href="https://www.instagram.com/reel/CooF0goDRLG/" target="_blank" class="card-title">De llantas a camitas</a>
-                  </h3>
-
-                </div>
-
+        <!-- Slider solo para móviles -->
+        <div class="swiper services-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="service-card-alt">
+                <i class="ri-heart-line"></i>
+                <h3>Adopción responsable</h3>
+                <p>Ofrecemos un servicio de adopción seguro, confiable y transparente para conectar animales con hogares amorosos.</p>
+                <!-- <a href="#" class="btn-card">
+              <span>Saber más</span>
+              <i class="ri-arrow-right-line"></i>
+            </a> -->
               </div>
-            </li> -->
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
-                  <img src="./assets/images/blog-4.png" width="860" height="646" loading="lazy"
-                    alt="6ta Campaña de esterilización" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <time class="time" datetime="2023-05-28">¡Únete ahora!</time>
-
-                  <h3 class="h3">
-                    <a href="https://www.facebook.com/profile.php?id=61552034053932" target="_blank" class="card-title">Voluntarios BOCO</a>
-                  </h3>
-
-                </div>
-
+            </div>
+            <div class="swiper-slide">
+              <div class="service-card-alt">
+                <i class="ri-lightbulb-line"></i>
+                <h3>Consejos de cuidado</h3>
+                <p>Orientación en nutrición, ejercicio y comportamiento para asegurar que tu mascota tenga una vida feliz y saludable.</p>
+                <a href="blog.html" class="btn-card">
+                  <span>Saber más</span>
+                  <i class="ri-arrow-right-line"></i>
+                </a>
               </div>
-            </li>
-
-            <!--<li>
-              <div class="blog-card grid">
-
-                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
-                  <img src="./assets/images/blog-4.jpg" width="860" height="646" loading="lazy"
-                    alt="3 Ways to Get Client Approval for Scope Changes" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <time class="time" datetime="2022-06-16">Domingo 28 de Mayo, 2023</time>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">3 Ways to Get Client Approval for Scope Changes</a>
-                  </h3>
-
-                </div>
-
+            </div>
+            <div class="swiper-slide">
+              <div class="service-card-alt">
+                <i class="ri-shopping-bag-line"></i>
+                <h3>Venta de artículos</h3>
+                <p>Nuestra tienda en línea ofrece todo lo que necesitas para cuidar a tus mascotas, desde alimento hasta accesorios.</p>
+                <!-- <a href="#" class="btn-card">
+              <span>Saber más</span>
+              <i class="ri-arrow-right-line"></i>
+            </a> -->
+            <a class="btn-card">
+              <span>¡Próximamente!</span>
+            </a>
               </div>
-            </li>
-
-            <li>
-              <div class="blog-card grid">
-
-                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
-                  <img src="./assets/images/blog-5.jpg" width="860" height="646" loading="lazy"
-                    alt="Top 21 Must-Read Blogs For Creative Agencies" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Top 21 Must-Read Blogs For Creative Agencies</a>
-                  </h3>
-
-                </div>
-
-              </div>
-            </li>-->
-
-          </ul>
-
+            </div>
+          </div>
+          <!-- Flechas y paginación -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
-
-
-
-
-      <!-- 
-        - #CONTACT
-      -->
-
-      <section class="section contact" id="redes" aria-label="redes">
-        <div class="container">
-
-          <h2 class="h2 section-title">Redes sociales</h2>
-
-          <p class="section-text">
-            Cuentas oficiales
-          </p>
-
-          <ul class="contact-list">
-
-                        <li class="contact-item">
-              <div class="contact-card">
-
-                <div class="card-icon">
-                  <ion-icon name="logo-facebook"></ion-icon>
+      <!-- #PROCESO DE ADOPCION -->
+      <section id="proceso-adopcion" class="adoption-process-section" aria-label="Proceso de adopción">
+        <div class="adoption-process-grid">
+          <div class="adoption-image-column">
+            <img src="assets/images/gatoacariciado.png" alt="Gato siendo acariciado">
+            <!-- <a href="#" class="btn btn-primary">¡Adoptar ahora!</a> -->
                 </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">Facebook</h3>
-
-                  <a href="https://www.facebook.com/profile.php?id=61552034053932" target="_blank" class="card-link">BOCO</a>
-
-                </div>
-
+          <div class="adoption-content-column">
+            <h2 class="section-title">Como adoptar a tu nuevo amigo</h2>
+            <p>¿Listo para llevar a casa a tu nuevo mejor amigo? Nuestro proceso de adopción, sencillo y solidario, te garantiza que encuentres la pareja perfecta.</p>
+            <div class="process-steps-grid">
+              <div class="process-step-card">
+                <i class="ri-search-line"></i>
+                <h3>Encuentra a tu mascota</h3>
+                <p>Explora nuestras redes sociales y conoce a las mascotas que esperan un nuevo hogar.</p>
               </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="contact-card">
-
-                <div class="card-icon">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">Instagram</h3>
-
-                  <a href="https://www.instagram.com/_boco_mx/" target="_blank" class="card-link">_boco_mx</a>
-
-                </div>
-
+              <div class="process-step-card">
+                <i class="ri-chat-3-line"></i>
+                <h3>Contacta y conoce</h3>
+                <p>Ponte en contacto con nosotros para conocer a un posible compañero.</p>
               </div>
-            </li>
-
-            <!--<li class="contact-item">
-              <div class="contact-card">
-
-                <div class="card-icon">
-                  <ion-icon name="logo-tiktok"></ion-icon>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">TikTok</h3>
-
-                  <a href="https://www.tiktok.com/@bocomx" target="_blank" class="card-link">bocomx</a>
-
-                </div>
-
+              <div class="process-step-card">
+                <i class="ri-file-list-3-line"></i>
+                <h3>Completa el papeleo</h3>
+                <p>Finaliza la adopción con la documentación necesaria.</p>
               </div>
-            </li>-->
-
-          </ul>
-
+              <div class="process-step-card">
+                <i class="ri-home-heart-line"></i>
+                <h3>Llévalo a casa</h3>
+                <p>Lleva a tu nuevo amigo a casa y empieza una nueva vida juntos.</p>
+              </div>
+                </div>
+              </div>
         </div>
-
-
       </section>
 
-      <section class="section contact" id="contacto" aria-label="contacto">
-        <div class="container">
-
-          <h2 class="h2 section-title">Contacta con nosotros</h2>
-
-          <p class="section-text">
-            Lunes a Viernes 08:00 a.m. - 06:00 p.m.
-          </p>
-
-          <ul class="contact-list">
-
-            <li class="contact-item">
-              <div class="contact-card">
-
-                <div class="card-icon">
-                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">Gmail</h3>
-
-                  <a href="mailto:bocomx.oficial@gmail.com" target="_blank" class="card-link">bocomx.oficial@gmail.com</a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <!--<li class="contact-item">
-              <div class="contact-card">
-
-                <div class="card-icon">
-                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">Télefono</h3>
-
-                  <a href="tel:2941399983" class="card-link">294 139 9983</a>
-
-                </div>
-
-              </div>
-            </li>-->
-
-            <!--<li class="contact-item">
-              <div class="contact-card">
-
-                <div class="card-icon">
-                  <ion-icon name="logo-whatsapp"></ion-icon>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">WhatsApp</h3>
-
-                  <a href="https://wa.me/+522941399983" target="_blank" class="card-link">(+52) 294 139 9983</a>
-
-                </div>
-
-              </div>
-            </li>-->
-
-          </ul>
-
+      <!-- #PROYECTOS -->
+      <section id="proyectos" class="projects-section" aria-label="proyectos">
+        <div class="projects-header">
+          <h2 class="section-title">Nuestros Proyectos</h2>
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
 
-        
+        <div class="swiper projects-slider">
+          <div class="swiper-wrapper">
+            <!-- Proyecto 1 -->
+            <div class="swiper-slide">
+              <a href="campañasdeesterilizacion.html" class="project-card">
+                <figure class="project-card-image">
+                  <img src="assets/images/proyectos/camapañasdeesterilizacion.png" alt="Campaña de esterilización">
+                  <div class="project-authors">
+                    <img src="assets/images/avatares/miembros/BOCO.png" alt="BOCO">
+                    <img src="assets/images/avatares/colaboradores/Yoel.png" alt="Yoel Rocha">
+                    <img src="assets/images/avatares/colaboradores/Veterinaria la granja.png" alt="Veterinaria la Granja">
+        </div>
+                </figure>
+                <div class="project-card-content">
+                  <h3>Campañas de esterilización</h3>
+                </div>
+              </a>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="swiper-slide">
+              <a href="campañasdevacunacion.html" class="project-card">
+                <figure class="project-card-image">
+                  <img src="assets/images/proyectos/campañadevacunacion.png" alt="Campaña de vacunación">
+                  <div class="project-authors">
+                    <img src="assets/images/avatares/miembros/BOCO.png" alt="BOCO">
+                    <img src="assets/images/avatares/colaboradores/Yoel.png" alt="Yoel Rocha">
+                    <img src="assets/images/avatares/miembros/Jedet.png" alt="Jedet Ixba">
+                    <img src="assets/images/avatares/colaboradores/Veterinaria la granja.png" alt="Veterinaria la Granja">
+              </div>
+                </figure>
+                <div class="project-card-content">
+                  <h3>Campañas de vacunación</h3>
+                </div>
+              </a>
+            </div>
+            <!-- Proyecto 3 -->
+            <div class="swiper-slide">
+              <a href="campañasdeadopcion.html" class="project-card">
+                <figure class="project-card-image">
+                  <img src="assets/images/proyectos/campañadeadopcion.png" alt="Campaña de adopción">
+                  <div class="project-authors">
+                    <img src="assets/images/avatares/miembros/BOCO.png" alt="BOCO">
+                    <img src="assets/images/avatares/colaboradores/Yoel.png" alt="Yoel Rocha">
+                    <img src="assets/images/avatares/miembros/Fabián.png" alt="Fabián">
+              </div>
+                </figure>
+                <div class="project-card-content">
+                  <h3>Campañas de adopción</h3>
+                </div>
+              </a>
+              </div>
+            <!-- Proyecto 4 -->
+            <div class="swiper-slide">
+              <a href="https://www.instagram.com/reel/CooF0goDRLG/" target="_blank" class="project-card">
+                <figure class="project-card-image">
+                  <img src="assets/images/proyectos/dellantasacamitas.png" alt="Proyecto de llantas a camitas">
+                  <div class="project-authors">
+                    <img src="assets/images/avatares/colaboradores/Yoel.png" alt="Yoel Rocha">
+        </div>
+                </figure>
+                <div class="project-card-content">
+                  <h3>De Llantas a Camitas</h3>
+                </div>
+              </a>
+                </div>
+            <!-- Proyecto 5 -->
+            <div class="swiper-slide">
+              <a href="rescateanimal.html" class="project-card">
+                <figure class="project-card-image">
+                  <img src="assets/images/proyectos/rescateanimal.png" alt="Rescate animal">
+                  <div class="project-authors">
+                    <img src="assets/images/avatares/miembros/BOCO.png" alt="BOCO">
+                    <img src="assets/images/avatares/miembros/Vianey.png" alt="BOCO">
+              </div>
+                </figure>
+                <div class="project-card-content">
+                  <h3>Rescate y cuidado animal</h3>
+                </div>
+              </a>
+                </div>
+              </div>
+                </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- #BLOG -->
+      <section id="blog" class="blog-section" aria-labelledby="blog-title">
+        <div class="blog-header">
+          <h2 id="blog-title" class="section-title">Historias de éxito y noticias</h2>
+          <a href="blog.html" class="btn btn-secondary btn-blog-desktop">Ver todo</a>
+                </div>
+        <div class="blog-grid">
+          <!-- Blog Card 1 -->
+          <a href="blog-post.html?id=2" class="blog-card">
+            <figure class="blog-card-image">
+              <img src="assets/images/blog/10 campañas de esterilización.png" alt="Historia de éxito 2">
+            </figure>
+            <div class="blog-card-content">
+              <h3>Hemos logrado 10 Campañas de esterilización</h3>
+              <p>Nuestra última campaña en la que ayudamos a conectar perritos y gatitos con familias responsables.</p>
+              <div class="learn-more-link">
+                <span>Leer más</span>
+                <i class="ri-arrow-right-line"></i>
+              </div>
+                </div>
+          </a>
+          
+          <!-- Blog Card 2 -->
+          <a href="blog-post.html?id=3" class="blog-card">
+            <figure class="blog-card-image">
+              <img src="assets/images/blog/BOCO en las noticias.png" alt="Historia de éxito 3">
+            </figure>
+            <div class="blog-card-content">
+              <h3>BOCO en las noticias</h3>
+              <p>Fuimos reconocidos por nuestra labor. Lee la nota completa y entérate de nuestro impacto en la comunidad.</p>
+              <div class="learn-more-link">
+                <span>Leer más</span>
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Blog Card 3 -->
+          <a href="blog-post.html?id=1" class="blog-card">
+            <figure class="blog-card-image">
+              <img src="assets/images/blog/La negrita y sus cachorros.png" alt="Historia de éxito 1">
+            </figure>
+            <div class="blog-card-content">
+              <h3>Nuestro primer rescate animal</h3>
+              <p>Descubre la historia de la Negrita y sus cachorros, una perrita que encontramos en condiciones difíciles y ahora disfruta de un hogar amoroso.</p>
+              <div class="learn-more-link">
+                <span>Leer más</span>
+                <i class="ri-arrow-right-line"></i>
+              </div>
+                </div>
+          </a>
+        </div>
+        <a href="blog.html" class="btn btn-secondary btn-blog-mobile">Ver todo</a>
       </section>
 
     </article>
   </main>
 
+  <!-- #FOOTER -->
+  <footer>
+    <div class="footer-cta">
+      <div class="footer-cta-content">
+        <h2>Apoya Nuestra Causa</h2>
+        <p>Tu donación nos permite seguir cambiando vidas. Cada patita cuenta.</p>
+        <a href="#" class="btn btn-primary">Donar Ahora</a>
+      </div>
+    </div>
 
+    <div class="footer-main footer-mobile">
+      <div id="contacto" class="footer-brand">
+        <a href="#" class="logo">BOCO</a>
+        <p>Fomentando la adopción y el cuidado responsable de mascotas a través de la tecnología y la comunidad.</p>
+        <ul class="social-links">
+          <li><a href="https://www.facebook.com/profile.php?id=61552034053932" target="_blank" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></li>
+          <li><a href="https://www.instagram.com/_boco_mx/" target="_blank" aria-label="Instagram"><i class="ri-instagram-fill"></i></a></li>
+          <li><a href="mailto:bocomx.oficial@gmail.com" target="_blank" aria-label="Email"><i class="ri-mail-fill"></i></a></li>
+        </ul>
+      </div>
 
+      <div class="footer-links">
+        <h4>Menú</h4>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="acercade.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
 
+      <div class="footer-links">
+        <h4>Proyectos</h4>
+        <ul>
+          <li><a href="campañasdeesterilizacion.html">Esterilización</a></li>
+          <li><a href="campañasdevacunacion.html">Vacunación</a></li>
+          <li><a href="campañasdeadopcion.html">Adopción</a></li>
+          <li><a href="rescateanimal.html">Rescate Animal</a></li>
+        </ul>
+      </div>
 
-  <!-- 
-    - #FOOTER
-  -->
+      <div class="footer-links">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="acercade.html#faq">Preguntas frecuentes</a></li>
+          <li><a href="privacidad.html">Política de Privacidad</a></li>
+          <li><a href="terminos.html">Términos & Condiciones</a></li>
+        </ul>
+      </div>
+    </div>
 
-  <footer class="footer">
-    <div class="container">
-
-      <p class="copyright"> BOCO
-        &copy; 2024 Todos los derechos reservados. </p>
-
+    <div class="footer-bottom">
+      <p>BOCO &copy; <span id="year"></span><br>Todos los derechos reservados.</p>
     </div>
   </footer>
 
+  <!-- AÑO AUTOMATICO EN EL FOOTER -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
-  <a href="#top" aria-label="back to top" data-back-top-btn class="back-top-btn">
-    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-  </a>
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
+  <!-- CUSTOM JAVASCRIPT -->
   <script src="./assets/js/script.js" defer></script>
 
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Swiper.js JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- PRELOADER QUERY -->
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <script src="./assets/js/preloader.js"></script>
+  <script>
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("header-active");
+      } else {
+        header.classList.remove("header-active");
+      }
+    });
+  </script>
 
 </body>
 
