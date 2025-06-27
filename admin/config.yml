@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/images/blog"
+public_folder: "/assets/images/blog"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog-post"}
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Autor", name: "author", widget: "string"}
+      - {label: "Imagen de Portada", name: "cover_image", widget: "image"}
+      - {label: "Imagen Principal", name: "main_image", widget: "image"}
+      - {label: "Imagen 2", name: "image_2", widget: "image", required: false}
+      - {label: "Extracto", name: "excerpt", widget: "text"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
+
+  - name: "proyectos"
+    label: "Proyectos"
+    folder: "_proyectos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "project-details"}
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Imagen Principal", name: "main_image", widget: "image"}
+      - {label: "Galería de Fotos", name: "gallery", widget: "list", fields: [{label: "Imagen", name: "image", widget: "image"}]}
+      - {label: "Descripción", name: "description", widget: "markdown"}
+      - {label: "Participantes", name: "participants", widget: "list", fields: [{label: "Nombre", name: "name", widget: "string"}, {label: "Avatar", name: "avatar", widget: "image"}]}
