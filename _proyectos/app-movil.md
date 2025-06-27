@@ -9,7 +9,7 @@ gallery:
   - image: /assets/images/blog/1.png
   - image: /assets/images/blog/2.png
   - image: /assets/images/blog/3.png
-description: a﻿pp boco prueba
+description: PRUEBA DE PROYECTO
 participants:
   - name: Fabian
     avatar: /assets/images/blog/perfil.png
