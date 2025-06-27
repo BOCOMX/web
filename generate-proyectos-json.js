@@ -17,6 +17,8 @@ fs.readdirSync(proyectosDir).forEach(file => {
       title: data.title,
       slug: file.replace('.md', ''),
       main_image: data.main_image,
+      thumbnail: data.thumbnail,
+      gallery: data.gallery || [],
       authors: data.participants || [],
       tipo: data.tipo || 'boco',
       destacado: data.destacado || false
