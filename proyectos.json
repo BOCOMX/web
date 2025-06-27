@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Campañas de esterilización",
+    "slug": "campanasdeesterilizacion",
+    "main_image": "assets/images/proyectos/camapañasdeesterilizacion.png",
+    "authors": [
+      {"name": "BOCO", "avatar": "assets/images/avatares/miembros/BOCO.png"},
+      {"name": "Yoel Rocha", "avatar": "assets/images/avatares/colaboradores/Yoel.png"},
+      {"name": "Veterinaria la Granja", "avatar": "assets/images/avatares/colaboradores/Veterinaria la granja.png"}
+    ],
+    "tipo": "boco",
+    "destacado": true
+  },
+  {
+    "title": "Campañas de vacunación",
+    "slug": "campanasdevacunacion",
+    "main_image": "assets/images/proyectos/campañadevacunacion.png",
+    "authors": [
+      {"name": "BOCO", "avatar": "assets/images/avatares/miembros/BOCO.png"},
+      {"name": "Yoel Rocha", "avatar": "assets/images/avatares/colaboradores/Yoel.png"},
+      {"name": "Jedet Ixba", "avatar": "assets/images/avatares/miembros/Jedet.png"},
+      {"name": "Veterinaria la Granja", "avatar": "assets/images/avatares/colaboradores/Veterinaria la granja.png"}
+    ],
+    "tipo": "boco",
+    "destacado": true
+  },
+  {
+    "title": "Campañas de adopción",
+    "slug": "campanasdeadopcion",
+    "main_image": "assets/images/proyectos/campañadeadopcion.png",
+    "authors": [
+      {"name": "BOCO", "avatar": "assets/images/avatares/miembros/BOCO.png"},
+      {"name": "Yoel Rocha", "avatar": "assets/images/avatares/colaboradores/Yoel.png"},
+      {"name": "Fabián", "avatar": "assets/images/avatares/miembros/Fabián.png"}
+    ],
+    "tipo": "boco",
+    "destacado": false
+  },
+  {
+    "title": "Rescate y cuidado animal",
+    "slug": "rescateanimal",
+    "main_image": "assets/images/proyectos/rescateanimal.png",
+    "authors": [
+      {"name": "BOCO", "avatar": "assets/images/avatares/miembros/BOCO.png"},
+      {"name": "Vianey", "avatar": "assets/images/avatares/miembros/Vianey.png"}
+    ],
+    "tipo": "boco",
+    "destacado": false
+  },
+  {
+    "title": "Día mundial de los animales 2023",
+    "slug": "dia-mundial-animales-2023",
+    "main_image": "assets/images/proyectos/Al Día Noticias.png",
+    "authors": [
+      {"name": "Al Día Noticias", "avatar": "assets/images/avatares/colaboradores/Al Día Noticias.png"},
+      {"name": "Abigail", "avatar": "assets/images/avatares/colaboradores/Abigail.png"}
+    ],
+    "tipo": "colaboracion",
+    "destacado": false
+  },
+  {
+    "title": "De Llantas a Camitas",
+    "slug": "de-llantas-a-camitas",
+    "main_image": "assets/images/proyectos/dellantasacamitas.png",
+    "authors": [
+      {"name": "Yoel", "avatar": "assets/images/avatares/colaboradores/Yoel.png"},
+      {"name": "BOCO", "avatar": "assets/images/avatares/miembros/BOCO.png"}
+    ],
+    "tipo": "colaboracion",
+    "destacado": true
+  }
+] 
