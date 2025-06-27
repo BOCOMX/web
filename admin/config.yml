@@ -27,6 +27,8 @@ collections:
       - {label: "Miniatura (400x300px)", name: "thumbnail", widget: "image", hint: "Miniatura para listas - ideal 400x300px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
       - {label: "Extracto", name: "excerpt", widget: "text", hint: "Resumen corto del blog (aparece en listas)"}
       - {label: "Contenido del Blog", name: "body", widget: "markdown", hint: "Contenido completo del blog en formato Markdown"}
+      - {label: "Categoría", name: "categoria", widget: "string", required: false, hint: "Categoría del blog (opcional)"}
+      - {label: "Tags", name: "tags", widget: "list", required: false, hint: "Palabras clave separadas por coma"}
 
   - name: "proyectos"
     label: "Proyectos"
@@ -36,6 +38,8 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "project-details"}
       - {label: "Título del Proyecto", name: "title", widget: "string", hint: "Nombre del proyecto"}
+      - {label: "Tipo de Proyecto", name: "tipo", widget: "select", options: ["boco", "colaboracion"], default: "boco", hint: "¿Es un proyecto de BOCO o una colaboración?"}
+      - {label: "Destacado en Inicio", name: "destacado", widget: "boolean", default: false, hint: "¿Mostrar este proyecto en el carrousel de inicio?"}
       - {label: "Imagen Principal (1920x500px)", name: "main_image", widget: "image", hint: "Imagen de portada del proyecto - ideal 1920x500px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
       - {label: "Miniatura (510x600px)", name: "thumbnail", widget: "image", hint: "Miniatura para listas - ideal 510x600px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
       - {label: "Galería de Fotos", name: "gallery", widget: "list", hint: "Agrega fotos del proyecto (ideal 640x300px cada una)", fields: [{label: "Foto", name: "image", widget: "image", hint: "Foto del proyecto - ideal 640x300px"}]}
