@@ -1,0 +1,12 @@
+{
+  "name": "boco-web",
+  "version": "1.0.0",
+  "description": "Sitio web de BOCO con Netlify CMS y generación automática de proyectos",
+  "main": "index.js",
+  "scripts": {
+    "build": "node generate-proyectos-json.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+} 
