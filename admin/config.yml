@@ -38,6 +38,7 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "project-details"}
       - {label: "Título del Proyecto", name: "title", widget: "string", hint: "Nombre del proyecto"}
+      - {label: "Orden de Aparición", name: "orden", widget: "number", default: 999, hint: "Número menor = aparece primero (1, 2, 3...)"}
       - {label: "Tipo de Proyecto", name: "tipo", widget: "select", options: ["boco", "colaboracion"], default: "boco", hint: "¿Es un proyecto de BOCO o una colaboración?"}
       - {label: "Destacado en Inicio", name: "destacado", widget: "boolean", default: false, hint: "¿Mostrar este proyecto en el carrousel de inicio?"}
       - {label: "Imagen Principal (1920x500px)", name: "main_image", widget: "image", hint: "Imagen de portada del proyecto - ideal 1920x500px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
