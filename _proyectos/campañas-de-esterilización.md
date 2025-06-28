@@ -3,7 +3,7 @@ layout: project-details
 title: Campañas de esterilización
 orden: 1
 tipo: boco
-destacado: false
+destacado: true
 main_image: /assets/images/blog/imagen-principal-proyecto.png
 thumbnail: /assets/images/blog/camapañasdeesterilizacion.png
 gallery:
