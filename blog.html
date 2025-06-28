@@ -122,38 +122,5 @@
       }
     });
   </script>
-  <script>
-    // Blog paginación
-    document.addEventListener('DOMContentLoaded', function () {
-      const blogGrid = document.getElementById('blogGrid');
-      const pagination = document.getElementById('pagination');
-      const cards = Array.from(blogGrid.children);
-      const cardsPerPage = 9;
-      let currentPage = 1;
-      function renderPage(page) {
-        cards.forEach((card, i) => {
-          card.style.display = (i >= (page - 1) * cardsPerPage && i < page * cardsPerPage) ? '' : 'none';
-        });
-        renderPagination(page);
-      }
-      function renderPagination(page) {
-        const totalPages = Math.ceil(cards.length / cardsPerPage);
-        let html = '';
-        if (totalPages > 1) {
-          for (let i = 1; i <= totalPages; i++) {
-            html += `<button class="page-btn${i === page ? ' active' : ''}" data-page="${i}">${i}</button>`;
-          }
-        }
-        pagination.innerHTML = html;
-        Array.from(pagination.querySelectorAll('.page-btn')).forEach(btn => {
-          btn.onclick = () => {
-            renderPage(Number(btn.dataset.page));
-            document.getElementById('blog-title').scrollIntoView({ behavior: 'smooth', block: 'start' });
-          };
-        });
-      }
-      renderPage(currentPage);
-    });
-  </script>
 </body>
 </html> 
