@@ -1,37 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const { marked } = require('marked');
 
-// Función mejorada para convertir markdown a HTML
+// Conversión profesional de markdown a HTML usando marked
 function markdownToHtml(markdown) {
   if (!markdown) return '';
-
-  // Procesar listas
-  let html = markdown
-    .replace(/\n\n/g, '</p><p>') // Dobles saltos de línea = nuevo párrafo
-    .replace(/^# (.*)$/gim, '<h1>$1</h1>')
-    .replace(/^## (.*)$/gim, '<h2>$1</h2>')
-    .replace(/^### (.*)$/gim, '<h3>$1</h3>')
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>');
-
-  // Listas con * o -
-  html = html.replace(/(<p>)?([*-]) (.*?)(<\/p>)?(?=\n|$)/g, '<li>$3</li>');
-  // Agrupar <li> en <ul>
-  html = html.replace(/(<li>.*?<\/li>\s*)+/g, match => `<ul>${match.replace(/\n/g, '')}</ul>`);
-
-  // Listas numeradas
-  html = html.replace(/(<p>)?(\d+)\. (.*?)(<\/p>)?(?=\n|$)/g, '<li>$3</li>');
-  html = html.replace(/(<li>.*?<\/li>\s*)+/g, match => `<ol>${match.replace(/\n/g, '')}</ol>`);
-
-  // Párrafos
-  html = html.replace(/(^|\n)(?!<h\d|<ul>|<ol>|<li>|<\/ul>|<\/ol>|<\/li>|<p>|<\/p>)([^<\n][^\n]*)/g, (m, p1, p2) => `<p>${p2.trim()}</p>`);
-
-  // Limpiar <p> duplicados alrededor de listas y títulos
-  html = html.replace(/<p>(\s*)<(h\d|ul|ol)>/g, '<$2>');
-  html = html.replace(/<\/(h\d|ul|ol)>(\s*)<\/p>/g, '</$1>');
-
-  return html;
+  return marked.parse(markdown);
 }
 
 // Función para formatear fecha
