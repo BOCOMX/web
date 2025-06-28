@@ -1,19 +1,20 @@
 ---
 layout: blog-post
-title: "Mi primer blog"
+title: Mi primer blog
 date: 2024-01-15T10:00:00.000Z
-author: "Equipo BOCO"
-author_avatar: "/assets/images/blog/perfil.png"
-main_image: "/assets/images/blog/1.png"
-image_2: "/assets/images/blog/2.png"
-thumbnail: "/assets/images/blog/1.png"
-excerpt: "Este es un extracto de mi primer blog que describe la historia de cómo comenzamos nuestra misión de ayudar a los animales."
-categoria: "Historias"
-tags: ["rescate", "adopción", "bienestar animal"]
+author: Equipo BOCO
+author_avatar: /assets/images/blog/perfil.png
+main_image: /assets/images/blog/1.png
+image_2: /assets/images/blog/2.png
+thumbnail: /assets/images/blog/1.png
+excerpt: Este es un extracto de mi primer blog que describe la historia de cómo
+  comenzamos nuestra misión de ayudar a los animales.
+categoria: Historias
+tags:
+  - rescate
+  - adopción
+  - bienestar animal
 ---
-
-# Mi primer blog
-
 Bienvenidos a nuestro primer blog post. Hoy queremos compartir con ustedes la historia de cómo comenzó todo.
 
 ## El inicio de BOCO
@@ -24,10 +25,10 @@ Todo comenzó cuando un grupo de amigos decidimos que era momento de hacer algo 
 
 Nuestra misión es simple pero poderosa: **ayudar a los animales que más lo necesitan**. Esto incluye:
 
-- Rescatar animales en situación de calle
-- Facilitar adopciones responsables
-- Educar sobre el bienestar animal
-- Organizar campañas de esterilización
+* Rescatar animales en situación de calle
+* Facilitar adopciones responsables
+* Educar sobre el bienestar animal
+* Organizar campañas de esterilización
 
 ## Los primeros pasos
 
@@ -48,6 +49,6 @@ Tenemos grandes planes para el futuro. Queremos expandir nuestros servicios y ll
 
 *¡Gracias por ser parte de esta hermosa misión!*
 
----
+- - -
 
 *Escrito por el Equipo BOCO*
