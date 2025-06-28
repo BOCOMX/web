@@ -17,7 +17,7 @@ function renderProjects(projects, filter = 'proyectos') {
         `<img src="${a.avatar}" alt="${a.name}">`
       ).join('');
       gallery.innerHTML += `
-        <a href="project-details.html?slug=${project.slug}" class="project-card" data-category="${project.tipo}">
+        <a href="detalles.html?slug=${project.slug}" class="project-card" data-category="${project.tipo}">
           <figure class="project-card-image">
             <img src="${project.thumbnail}" alt="${project.title}" />
             <div class="project-authors">${authorsHTML}</div>
