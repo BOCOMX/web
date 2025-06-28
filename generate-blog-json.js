@@ -1,12 +1,36 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
-const { marked } = require('marked');
 
-// Conversión profesional de markdown a HTML usando marked
+// Conversión manual mejorada de markdown a HTML
 function markdownToHtml(markdown) {
   if (!markdown) return '';
-  return marked.parse(markdown);
+
+  // Procesar títulos
+  let html = markdown
+    .replace(/^### (.*)$/gim, '<h3>$1</h3>')
+    .replace(/^## (.*)$/gim, '<h2>$1</h2>')
+    .replace(/^# (.*)$/gim, '<h1>$1</h1>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+  // Procesar listas no ordenadas
+  html = html.replace(/(^|\n)[ ]*\* (.*?)(?=\n|$)/g, (match, p1, p2) => `${p1}<li>${p2}</li>`);
+  // Agrupar <li> en <ul>
+  html = html.replace(/(<li>.*?<\/li>\s*)+/g, match => `<ul>${match.replace(/\n/g, '')}</ul>`);
+
+  // Procesar listas ordenadas
+  html = html.replace(/(^|\n)[ ]*\d+\. (.*?)(?=\n|$)/g, (match, p1, p2) => `${p1}<li>${p2}</li>`);
+  html = html.replace(/(<li>.*?<\/li>\s*)+/g, match => `<ol>${match.replace(/\n/g, '')}</ol>`);
+
+  // Procesar párrafos (líneas que no son títulos ni listas)
+  html = html.replace(/(^|\n)(?!<h\d|<ul>|<ol>|<li>|<\/ul>|<\/ol>|<\/li>|<p>|<\/p>)([^<\n][^\n]*)/g, (m, p1, p2) => `<p>${p2.trim()}</p>`);
+
+  // Limpiar <p> duplicados alrededor de listas y títulos
+  html = html.replace(/<p>(\s*)<(h\d|ul|ol)>/g, '<$2>');
+  html = html.replace(/<\/(h\d|ul|ol)>(\s*)<\/p>/g, '</$1>');
+
+  return html;
 }
 
 // Función para formatear fecha
