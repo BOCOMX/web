@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Blog - BOCO</title>
+  <meta name="description" content="Historias de éxito, noticias y consejos de BOCO.">
+  <meta property="og:title" content="Blog - BOCO">
+  <meta property="og:description" content="Historias de éxito, noticias y consejos de BOCO.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png/FF678D/FFFFFF?text=BOCO+Blog">
+  <link rel="icon" href="icons/icon-512x512.png" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body class="blog-page" id="top">
+  <header>
+    <div>
+      <a href="index.html" class="logo">BOCO</a>
+      <nav>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Nosotros <i class="ri-arrow-down-s-line"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="acercade.html">Acerca de</a></li>
+              <li><a href="proyectos.html">Proyectos</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <button aria-label="Toggle menu">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </header>
+  <main>
+    <article>
+      <section class="blog-section" aria-labelledby="blog-title">
+        <div class="blog-header">
+          <h2 id="blog-title" class="section-title">Historias de éxito y noticias</h2>
+        </div>
+        <div class="blog-grid" id="blogGrid">
+          <!-- Las tarjetas del blog se cargarán dinámicamente -->
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </section>
+    </article>
+  </main>
+  <!-- #FOOTER -->
+  <footer>
+    <div class="footer-cta">
+      <div class="footer-cta-content">
+        <h2>Apoya Nuestra Causa</h2>
+        <p>Tu donación nos permite seguir cambiando vidas. Cada patita cuenta.</p>
+        <a href="#" class="btn btn-primary">Donar Ahora</a>
+      </div>
+    </div>
+
+    <div class="footer-main footer-mobile">
+      <div id="contacto" class="footer-brand">
+        <a href="#" class="logo">BOCO</a>
+        <p>Fomentando la adopción y el cuidado responsable de mascotas a través de la tecnología y la comunidad.</p>
+        <ul class="social-links">
+          <li><a href="https://www.facebook.com/profile.php?id=61552034053932" target="_blank" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></li>
+          <li><a href="https://www.instagram.com/_boco_mx/" target="_blank" aria-label="Instagram"><i class="ri-instagram-fill"></i></a></li>
+          <li><a href="mailto:bocomx.oficial@gmail.com" target="_blank" aria-label="Email"><i class="ri-mail-fill"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Menú</h4>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="acercade.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Proyectos</h4>
+        <ul>
+          <li><a href="campañasdeesterilizacion.html">Esterilización</a></li>
+          <li><a href="campañasdevacunacion.html">Vacunación</a></li>
+          <li><a href="campañasdeadopcion.html">Adopción</a></li>
+          <li><a href="rescateanimal.html">Rescate Animal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="acercade.html#faq">Preguntas frecuentes</a></li>
+          <li><a href="privacidad.html">Política de Privacidad</a></li>
+          <li><a href="terminos.html">Términos & Condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>BOCO &copy; <span id="year"></span><br>Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/blog-dynamic.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("header-active");
+      } else {
+        header.classList.remove("header-active");
+      }
+    });
+  </script>
+  <script>
+    // Blog paginación
+    document.addEventListener('DOMContentLoaded', function () {
+      const blogGrid = document.getElementById('blogGrid');
+      const pagination = document.getElementById('pagination');
+      const cards = Array.from(blogGrid.children);
+      const cardsPerPage = 9;
+      let currentPage = 1;
+      function renderPage(page) {
+        cards.forEach((card, i) => {
+          card.style.display = (i >= (page - 1) * cardsPerPage && i < page * cardsPerPage) ? '' : 'none';
+        });
+        renderPagination(page);
+      }
+      function renderPagination(page) {
+        const totalPages = Math.ceil(cards.length / cardsPerPage);
+        let html = '';
+        if (totalPages > 1) {
+          for (let i = 1; i <= totalPages; i++) {
+            html += `<button class="page-btn${i === page ? ' active' : ''}" data-page="${i}">${i}</button>`;
+          }
+        }
+        pagination.innerHTML = html;
+        Array.from(pagination.querySelectorAll('.page-btn')).forEach(btn => {
+          btn.onclick = () => {
+            renderPage(Number(btn.dataset.page));
+            document.getElementById('blog-title').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          };
+        });
+      }
+      renderPage(currentPage);
+    });
+  </script>
+</body>
+</html> 
