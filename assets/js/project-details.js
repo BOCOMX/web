@@ -1,4 +1,5 @@
 // assets/js/project-details.js
+// Ahora para detalles.html
 
 // Función para obtener el slug del proyecto desde la URL
 function getProjectSlug() {
@@ -62,7 +63,8 @@ async function loadProjectDetails() {
   const slug = getProjectSlug();
   
   if (!slug) {
-    showError('No se especificó un proyecto');
+    // Redirigir a la galería si no hay slug
+    window.location.href = "proyectos.html";
     return;
   }
 
