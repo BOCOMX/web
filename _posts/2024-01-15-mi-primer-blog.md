@@ -2,7 +2,7 @@
 layout: blog-post
 title: Mi primer blog
 date: 2024-01-15T10:00:00.000Z
-author: Equipo BOCO
+author: BOCO
 author_avatar: /assets/images/blog/perfil.png
 main_image: /assets/images/blog/1.png
 image_2: /assets/images/blog/2.png
