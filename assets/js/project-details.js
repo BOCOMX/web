@@ -70,8 +70,11 @@ function updatePageContent(project) {
   
   // Actualizar descripción del proyecto
   const descElement = document.querySelector('.pd-desc');
-  if (descElement && project.description) {
-    // Convertir los \n en <br> para el HTML
+  if (descElement && project.description_html) {
+    // Usar la versión HTML ya convertida desde markdown
+    descElement.innerHTML = project.description_html;
+  } else if (descElement && project.description) {
+    // Fallback: convertir markdown básico si no hay HTML
     const formattedDescription = project.description.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
     descElement.innerHTML = `<p>${formattedDescription}</p>`;
   }
