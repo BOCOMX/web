@@ -51,12 +51,16 @@ function processMarkdownFiles() {
           authors: authors,
           tipo: data.tipo || 'boco',
           destacado: data.destacado || false,
-          fecha: data.date || new Date().toISOString().split('T')[0]
+          fecha: data.date || new Date().toISOString().split('T')[0],
+          orden: data.orden || 999 // Campo para controlar el orden manual
         };
         
         proyectos.push(proyecto);
       }
     });
+    
+    // Ordenar por el campo 'orden' (menor número = primero)
+    proyectos.sort((a, b) => a.orden - b.orden);
     
     // Escribir el JSON
     const jsonPath = path.join(__dirname, 'proyectos.json');
