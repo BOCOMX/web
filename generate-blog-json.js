@@ -2,19 +2,36 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-// Función para convertir markdown a HTML (simplificada)
+// Función mejorada para convertir markdown a HTML
 function markdownToHtml(markdown) {
   if (!markdown) return '';
-  
-  return markdown
-    .replace(/^# (.*$)/gim, '<h1>$1</h1>') // # Título -> <h1>Título</h1>
-    .replace(/^## (.*$)/gim, '<h2>$1</h2>') // ## Subtítulo -> <h2>Subtítulo</h2>
-    .replace(/^### (.*$)/gim, '<h3>$1</h3>') // ### Subsubtítulo -> <h3>Subsubtítulo</h3>
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **texto** -> <strong>texto</strong>
-    .replace(/\*(.*?)\*/g, '<em>$1</em>') // *texto* -> <em>texto</em>
-    .replace(/\n\n/g, '<br>') // Dobles saltos de línea se convierten en un solo <br>
-    .replace(/\n/g, '<br>') // Saltos simples se convierten en <br>
-    .replace(/^(.+)$/m, '<p>$1</p>'); // Envolver en párrafos si no está ya
+
+  // Procesar listas
+  let html = markdown
+    .replace(/\n\n/g, '</p><p>') // Dobles saltos de línea = nuevo párrafo
+    .replace(/^# (.*)$/gim, '<h1>$1</h1>')
+    .replace(/^## (.*)$/gim, '<h2>$1</h2>')
+    .replace(/^### (.*)$/gim, '<h3>$1</h3>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+  // Listas con * o -
+  html = html.replace(/(<p>)?([*-]) (.*?)(<\/p>)?(?=\n|$)/g, '<li>$3</li>');
+  // Agrupar <li> en <ul>
+  html = html.replace(/(<li>.*?<\/li>\s*)+/g, match => `<ul>${match.replace(/\n/g, '')}</ul>`);
+
+  // Listas numeradas
+  html = html.replace(/(<p>)?(\d+)\. (.*?)(<\/p>)?(?=\n|$)/g, '<li>$3</li>');
+  html = html.replace(/(<li>.*?<\/li>\s*)+/g, match => `<ol>${match.replace(/\n/g, '')}</ol>`);
+
+  // Párrafos
+  html = html.replace(/(^|\n)(?!<h\d|<ul>|<ol>|<li>|<\/ul>|<\/ol>|<\/li>|<p>|<\/p>)([^<\n][^\n]*)/g, (m, p1, p2) => `<p>${p2.trim()}</p>`);
+
+  // Limpiar <p> duplicados alrededor de listas y títulos
+  html = html.replace(/<p>(\s*)<(h\d|ul|ol)>/g, '<$2>');
+  html = html.replace(/<\/(h\d|ul|ol)>(\s*)<\/p>/g, '</$1>');
+
+  return html;
 }
 
 // Función para formatear fecha
