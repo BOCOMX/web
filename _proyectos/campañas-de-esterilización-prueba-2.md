@@ -1,6 +1,7 @@
 ---
 layout: project-details
-title: Campañas de esterilización PRUEBA 2
+title: Campañas de adopción
+orden: 2
 tipo: boco
 destacado: false
 main_image: /assets/images/blog/imagen-principal-proyecto.png
