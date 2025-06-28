@@ -1,0 +1,23 @@
+[
+  {
+    "id": "2024-01-15-mi-primer-blog",
+    "title": "Mi primer blog",
+    "slug": "2024-01-15-mi-primer-blog",
+    "date": "2024-01-15T10:00:00.000Z",
+    "formatted_date": "15 de enero de 2024",
+    "author": "Equipo BOCO",
+    "author_avatar": "/assets/images/blog/perfil.png",
+    "main_image": "/assets/images/blog/1.png",
+    "image_2": "/assets/images/blog/2.png",
+    "thumbnail": "/assets/images/blog/1.png",
+    "excerpt": "Este es un extracto de mi primer blog que describe la historia de cómo comenzamos nuestra misión de ayudar a los animales.",
+    "content": "\r\n# Mi primer blog\r\n\r\nBienvenidos a nuestro primer blog post. Hoy queremos compartir con ustedes la historia de cómo comenzó todo.\r\n\r\n## El inicio de BOCO\r\n\r\nTodo comenzó cuando un grupo de amigos decidimos que era momento de hacer algo por los animales que viven en las calles. Nos dimos cuenta de que había una necesidad real en nuestra comunidad.\r\n\r\n### Nuestra misión\r\n\r\nNuestra misión es simple pero poderosa: **ayudar a los animales que más lo necesitan**. Esto incluye:\r\n\r\n- Rescatar animales en situación de calle\r\n- Facilitar adopciones responsables\r\n- Educar sobre el bienestar animal\r\n- Organizar campañas de esterilización\r\n\r\n## Los primeros pasos\r\n\r\nLos primeros meses fueron difíciles, pero cada pequeño logro nos motivaba a seguir adelante. Recuerdo especialmente el día que rescatamos a **Luna**, una perrita que se convirtió en nuestra primera historia de éxito.\r\n\r\n### Lo que hemos logrado\r\n\r\nEn este tiempo hemos logrado:\r\n\r\n1. **Más de 50 adopciones exitosas**\r\n2. **Campañas de esterilización mensuales**\r\n3. **Educación en escuelas locales**\r\n4. **Colaboraciones con veterinarias**\r\n\r\n## El futuro\r\n\r\nTenemos grandes planes para el futuro. Queremos expandir nuestros servicios y llegar a más comunidades que necesiten nuestra ayuda.\r\n\r\n*¡Gracias por ser parte de esta hermosa misión!*\r\n\r\n---\r\n\r\n*Escrito por el Equipo BOCO*\r\n",
+    "content_html": "\r<p><br><h1>Mi primer blog</h1></p>\r<br>\r<br>Bienvenidos a nuestro primer blog post. Hoy queremos compartir con ustedes la historia de cómo comenzó todo.\r<br>\r<br><h2>El inicio de BOCO</h2>\r<br>\r<br>Todo comenzó cuando un grupo de amigos decidimos que era momento de hacer algo por los animales que viven en las calles. Nos dimos cuenta de que había una necesidad real en nuestra comunidad.\r<br>\r<br><h3>Nuestra misión</h3>\r<br>\r<br>Nuestra misión es simple pero poderosa: <strong>ayudar a los animales que más lo necesitan</strong>. Esto incluye:\r<br>\r<br>- Rescatar animales en situación de calle\r<br>- Facilitar adopciones responsables\r<br>- Educar sobre el bienestar animal\r<br>- Organizar campañas de esterilización\r<br>\r<br><h2>Los primeros pasos</h2>\r<br>\r<br>Los primeros meses fueron difíciles, pero cada pequeño logro nos motivaba a seguir adelante. Recuerdo especialmente el día que rescatamos a <strong>Luna</strong>, una perrita que se convirtió en nuestra primera historia de éxito.\r<br>\r<br><h3>Lo que hemos logrado</h3>\r<br>\r<br>En este tiempo hemos logrado:\r<br>\r<br>1. <strong>Más de 50 adopciones exitosas</strong>\r<br>2. <strong>Campañas de esterilización mensuales</strong>\r<br>3. <strong>Educación en escuelas locales</strong>\r<br>4. <strong>Colaboraciones con veterinarias</strong>\r<br>\r<br><h2>El futuro</h2>\r<br>\r<br>Tenemos grandes planes para el futuro. Queremos expandir nuestros servicios y llegar a más comunidades que necesiten nuestra ayuda.\r<br>\r<br><em>¡Gracias por ser parte de esta hermosa misión!</em>\r<br>\r<br>---\r<br>\r<br><em>Escrito por el Equipo BOCO</em>\r<br>",
+    "categoria": "Historias",
+    "tags": [
+      "rescate",
+      "adopción",
+      "bienestar animal"
+    ]
+  }
+]
