@@ -8,7 +8,7 @@ media_folder: "assets/images/blog"
 public_folder: "/assets/images/blog"
 
 # Configuración responsive para móviles
-display_url: https://boco-web.netlify.app
+display_url: https://bocomx.netlify.app/
 
 collections:
   - name: "blog"
