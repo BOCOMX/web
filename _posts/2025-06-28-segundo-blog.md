@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: Segundo BLOG
+title: Segundo BLOG PRUEBA
 date: 2025-06-28
 author: BOCO
 author_avatar: /assets/images/blog/perfil.png
