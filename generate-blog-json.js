@@ -12,7 +12,7 @@ function markdownToHtml(markdown) {
     .replace(/^### (.*$)/gim, '<h3>$1</h3>') // ### Subsubtítulo -> <h3>Subsubtítulo</h3>
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **texto** -> <strong>texto</strong>
     .replace(/\*(.*?)\*/g, '<em>$1</em>') // *texto* -> <em>texto</em>
-    .replace(/\n\n/g, '</p><p>') // Dobles saltos de línea se convierten en párrafos
+    .replace(/\n\n/g, '<br>') // Dobles saltos de línea se convierten en un solo <br>
     .replace(/\n/g, '<br>') // Saltos simples se convierten en <br>
     .replace(/^(.+)$/m, '<p>$1</p>'); // Envolver en párrafos si no está ya
 }
