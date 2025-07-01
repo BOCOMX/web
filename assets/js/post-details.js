@@ -42,6 +42,15 @@ async function loadPostDetails() {
     loadRelatedPosts(post.slug, posts);
     updatePostNavigation(posts, postIndex);
     
+    // Mostrar skeleton al inicio
+    const skeleton = document.getElementById('post-skeleton');
+    const mainContent = document.querySelector('article.blog-post');
+    if (skeleton) skeleton.style.display = 'block';
+    if (mainContent) mainContent.style.display = 'none';
+    
+    // Cuando termina de cargar y mostrar el post:
+    if (skeleton) skeleton.style.display = 'none';
+    if (mainContent) mainContent.style.display = '';
   } catch (error) {
     console.error('Error al cargar los detalles del post:', error);
     showError('Error al cargar el post');
