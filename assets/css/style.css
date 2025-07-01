@@ -3523,8 +3523,8 @@ body:not(.proyectos-page) .allies-section {
 }
 
 .post-navigation .nav-link.only-link.next {
-  justify-content: flex-end;
-  text-align: right;
+  justify-content: flex-start;
+  text-align: left;
 }
 .post-navigation .nav-link.only-link.prev {
   justify-content: flex-start;
