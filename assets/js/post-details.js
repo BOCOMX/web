@@ -90,11 +90,21 @@ function updatePostContent(post) {
     if (skelAuthorImg) skelAuthorImg.style.display = 'none';
     if (skelAuthor) skelAuthor.style.display = 'none';
 
-    // Mostrar los elementos reales
+    // Mostrar los elementos reales TODOS juntos
     const postImage = document.getElementById('postImage');
     if (postImage) postImage.style.display = '';
     const authorImage = document.getElementById('authorImage');
     if (authorImage) authorImage.style.display = '';
+    const authorName = document.getElementById('authorName');
+    if (authorName) authorName.style.display = '';
+    const postTitle = document.getElementById('postTitle');
+    if (postTitle) postTitle.style.display = '';
+    const postDate = document.getElementById('postDate');
+    if (postDate) postDate.style.display = '';
+    const postCategory = document.getElementById('postCategory');
+    if (postCategory) postCategory.style.display = '';
+    const postContent = document.getElementById('postContent');
+    if (postContent) postContent.style.display = '';
   }, 3000);
 
   // Actualizar título de la página
