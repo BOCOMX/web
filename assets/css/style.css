@@ -3521,3 +3521,12 @@ body:not(.proyectos-page) .allies-section {
   flex-basis: 100%;
   text-align: left;
 }
+
+.post-navigation .nav-link.only-link.next {
+  justify-content: flex-end;
+  text-align: right;
+}
+.post-navigation .nav-link.only-link.prev {
+  justify-content: flex-start;
+  text-align: left;
+}
