@@ -3580,7 +3580,7 @@ body:not(.proyectos-page) .allies-section {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .skeleton-title { width: 80vw; height: 1.7em; }
   .skeleton-img { height: 160px; }
   .skeleton-content { height: 70px; }
