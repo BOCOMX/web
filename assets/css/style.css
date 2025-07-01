@@ -3580,9 +3580,65 @@ body:not(.proyectos-page) .allies-section {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .skeleton-title { width: 80vw; height: 1.7em; }
   .skeleton-img { height: 160px; }
   .skeleton-content { height: 70px; }
   .skeleton-avatar { width: 36px; height: 36px; }
+}
+
+/* Skeleton Loader personalizado para detalles.html */
+.skeleton {
+  display: inline-block;
+  background: linear-gradient(90deg, #ececec 25%, #f3f3f3 50%, #ececec 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.2s infinite linear;
+  border-radius: 8px;
+}
+.skeleton-title {
+  height: 2.2em;
+  min-width: 180px;
+  width: 60vw;
+  max-width: 420px;
+  margin-bottom: 0.5em;
+}
+.skeleton-img {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 260px;
+  margin: 0 auto 2rem auto;
+  border-radius: 18px;
+}
+.skeleton-avatar {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 1em;
+  vertical-align: middle;
+}
+.skeleton-text {
+  height: 1.1em;
+  min-width: 60px;
+  width: 80px;
+  margin-bottom: 0.3em;
+  display: inline-block;
+}
+.skeleton-content {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 90px;
+  margin: 1.5em 0;
+}
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+@media (max-width: 600px) {
+  .skeleton-title { width: 80vw; height: 1.7em; }
+  .skeleton-img { height: 120px; }
+  .skeleton-content { height: 50px; }
+  .skeleton-avatar { width: 28px; height: 28px; }
 }
