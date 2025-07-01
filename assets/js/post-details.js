@@ -95,7 +95,7 @@ function updatePostContent(post) {
     if (postImage) postImage.style.display = '';
     const authorImage = document.getElementById('authorImage');
     if (authorImage) authorImage.style.display = '';
-  }, 800);
+  }, 2000);
 
   // Actualizar título de la página
   document.title = `${post.title} - BOCO Blog`;
