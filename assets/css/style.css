@@ -1575,12 +1575,33 @@ header button[aria-label="Toggle menu"] {
 }
 
 .post-content ul {
-  margin: 1.5rem 0;
-  padding-left: 2rem;
+  list-style: none;
+  padding-left: 0;
 }
 
-.post-content li {
-  margin-bottom: 0.5rem;
+.post-content ul li {
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 0.5em;
+}
+
+.post-content ul li::before {
+  display: inline-block;
+  font-family: 'remixicon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  font-size: 1em;
+  content: '\ea71'; /* Unicode de ri-circle-fill */
+  color: #FF678D;
 }
 
 .post-sidebar {
