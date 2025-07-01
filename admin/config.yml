@@ -53,6 +53,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Nombre de la Publicidad (solo para identificar)", name: "nombre", widget: "string", hint: "Este nombre es solo para identificar el banner en el CMS"}
       - {label: "Imagen de Publicidad (250x200px)", name: "imagen", widget: "image", hint: "Imagen de la publicidad - ideal 250x200px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
       - {label: "Enlace de destino", name: "enlace", widget: "string", hint: "URL a la que se abrirá al hacer clic (debe iniciar con https://)"}
       - {label: "Activa", name: "activa", widget: "boolean", default: true, hint: "¿Mostrar esta publicidad?"}
