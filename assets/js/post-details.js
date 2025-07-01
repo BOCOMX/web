@@ -267,12 +267,27 @@ function initShareButtons() {
   });
 }
 
+// Mostrar publicidad aleatoria
+function mostrarPublicidad() {
+  fetch('publicidad.json')
+    .then(res => res.json())
+    .then(publicidades => {
+      if (!publicidades || publicidades.length === 0) return;
+      const pub = publicidades[Math.floor(Math.random() * publicidades.length)];
+      const adContainer = document.getElementById('adContainer');
+      if (adContainer && pub.imagen && pub.enlace) {
+        adContainer.innerHTML = `<a href="${pub.enlace}" target="_blank" rel="noopener"><img src="${pub.imagen}" alt="Publicidad" style="width:250px;height:200px;object-fit:cover;border-radius:12px;box-shadow:0 2px 12px #0001;"></a>`;
+      }
+    });
+}
+
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
   // Solo ejecutar si estamos en la página de post
   if (document.querySelector('.blog-post-page')) {
     loadPostDetails();
     initShareButtons();
+    mostrarPublicidad();
   }
 });
 
