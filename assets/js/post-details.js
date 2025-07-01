@@ -263,7 +263,24 @@ function mostrarToast(mensaje) {
     toast.style.zIndex = '9999';
     toast.style.opacity = '0';
     toast.style.transition = 'opacity 0.3s';
+    toast.style.maxWidth = '90vw';
+    toast.style.wordBreak = 'break-word';
+    toast.style.textAlign = 'center';
     document.body.appendChild(toast);
+  }
+  // Adaptar estilos para móviles
+  if (window.innerWidth <= 758) {
+    toast.style.fontSize = '1rem';
+    toast.style.padding = '0.7rem 1.2rem';
+    toast.style.bottom = '80px';
+    toast.style.borderRadius = '1.2rem';
+    toast.style.maxWidth = '95vw';
+  } else {
+    toast.style.fontSize = '1.2rem';
+    toast.style.padding = '1rem 2rem';
+    toast.style.bottom = '40px';
+    toast.style.borderRadius = '2rem';
+    toast.style.maxWidth = '90vw';
   }
   toast.textContent = mensaje;
   toast.style.opacity = '1';
