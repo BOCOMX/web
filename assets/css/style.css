@@ -2754,10 +2754,29 @@ body:not(.proyectos-page) .allies-section {
 .post-navigation {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
-  gap: 2rem;
-  margin: 3rem 0 4rem 0;
+  align-items: center;
+  margin: 2em 0;
 }
+
+.post-navigation .nav-link {
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.post-navigation .nav-link.prev {
+  text-align: left;
+}
+
+.post-navigation .nav-link.next {
+  text-align: right;
+}
+
+/* Si solo hay un enlace visible, que quede a la izquierda */
+.post-navigation .nav-link:only-child {
+  flex-basis: 100%;
+  text-align: left;
+}
+
 .nav-link {
   display: flex;
   align-items: center;
