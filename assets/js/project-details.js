@@ -41,38 +41,63 @@ async function loadProjectDetails() {
 
 // Función para actualizar el contenido de la página
 function updatePageContent(project) {
+  // Mostrar skeletons dinámicos para avatares y galería
+  const avatarsList = document.querySelector('.pd-avatars-list');
+  const heroImg = document.querySelector('.pd-hero-img');
+  if (avatarsList && project.authors) {
+    avatarsList.innerHTML = project.authors.map((author, i) => `
+      <div class="pd-avatar-item">
+        <span class="skeleton skeleton-avatar" id="skel-avatar-${i}"></span>
+        <img src="${author.avatar}" alt="${author.name}" class="pd-avatar-img" style="display:none;">
+        <span class="pd-avatar-name"><span class="skeleton skeleton-text" id="skel-avatar-name-${i}"></span>${author.name}</span>
+      </div>
+    `).join('');
+  }
+  const desktopGallery = document.querySelector('.pd-gallery-grid');
+  if (desktopGallery && project.gallery) {
+    desktopGallery.innerHTML = project.gallery.map((item, i) => `
+      <span class="skeleton skeleton-img" id="skel-gallery-${i}"></span>
+      <img src="${item.image}" alt="Foto del proyecto" class="pd-gallery-img" style="display:none;">
+    `).join('');
+  }
+
+  // Skeleton de la imagen principal igual a la real
+  const heroImgSkeleton = document.getElementById('skel-proj-img');
+  if (heroImg && heroImgSkeleton) {
+    heroImgSkeleton.style.width = getComputedStyle(heroImg).width;
+    heroImgSkeleton.style.height = getComputedStyle(heroImg).height;
+    heroImgSkeleton.style.borderRadius = getComputedStyle(heroImg).borderRadius;
+    heroImgSkeleton.style.display = 'block';
+    heroImg.style.display = 'none';
+  }
+
   setTimeout(() => {
     // Ocultar skeletons
     const skelProjTitle = document.getElementById('skel-proj-title');
     const skelProjImg = document.getElementById('skel-proj-img');
     const skelDesc = document.getElementById('skel-desc');
-    const skelAvatar1 = document.getElementById('skel-avatar-1');
-    const skelAvatar2 = document.getElementById('skel-avatar-2');
-    const skelAvatar3 = document.getElementById('skel-avatar-3');
-    const skelAvatarName1 = document.getElementById('skel-avatar-name-1');
-    const skelAvatarName2 = document.getElementById('skel-avatar-name-2');
-    const skelAvatarName3 = document.getElementById('skel-avatar-name-3');
-    const skelGallery1 = document.getElementById('skel-gallery-1');
-    const skelGallery2 = document.getElementById('skel-gallery-2');
-    const skelGallery3 = document.getElementById('skel-gallery-3');
-
     if (skelProjTitle) skelProjTitle.style.display = 'none';
     if (skelProjImg) skelProjImg.style.display = 'none';
     if (skelDesc) skelDesc.style.display = 'none';
-    if (skelAvatar1) skelAvatar1.style.display = 'none';
-    if (skelAvatar2) skelAvatar2.style.display = 'none';
-    if (skelAvatar3) skelAvatar3.style.display = 'none';
-    if (skelAvatarName1) skelAvatarName1.style.display = 'none';
-    if (skelAvatarName2) skelAvatarName2.style.display = 'none';
-    if (skelAvatarName3) skelAvatarName3.style.display = 'none';
-    if (skelGallery1) skelGallery1.style.display = 'none';
-    if (skelGallery2) skelGallery2.style.display = 'none';
-    if (skelGallery3) skelGallery3.style.display = 'none';
-
+    // Avatares y nombres
+    if (project.authors) {
+      project.authors.forEach((author, i) => {
+        const skelA = document.getElementById(`skel-avatar-${i}`);
+        const skelN = document.getElementById(`skel-avatar-name-${i}`);
+        if (skelA) skelA.style.display = 'none';
+        if (skelN) skelN.style.display = 'none';
+      });
+    }
+    // Galería
+    if (project.gallery) {
+      project.gallery.forEach((item, i) => {
+        const skelG = document.getElementById(`skel-gallery-${i}`);
+        if (skelG) skelG.style.display = 'none';
+      });
+    }
     // Mostrar los elementos reales
     const heroTitle = document.querySelector('.pd-hero-title');
     if (heroTitle) heroTitle.childNodes.forEach(n => { if(n.nodeType === 3) n.parentNode.style.display = ''; });
-    const heroImg = document.querySelector('.pd-hero-img');
     if (heroImg) heroImg.style.display = '';
     const avatarImgs = document.querySelectorAll('.pd-avatar-img');
     avatarImgs.forEach(img => img.style.display = '');
@@ -90,14 +115,12 @@ function updatePageContent(project) {
   }
   
   // Actualizar imagen principal
-  const heroImg = document.querySelector('.pd-hero-img');
   if (heroImg && project.main_image) {
     heroImg.src = project.main_image;
     heroImg.alt = `Imagen principal de ${project.title}`;
   }
   
   // Actualizar avatares de autores
-  const avatarsList = document.querySelector('.pd-avatars-list');
   if (avatarsList && project.authors) {
     avatarsList.innerHTML = project.authors.map(author => `
       <div class="pd-avatar-item">
