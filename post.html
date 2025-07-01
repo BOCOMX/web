@@ -34,59 +34,41 @@
   </header>
 
   <main class="blog-post-container">
-    <div id="post-skeleton" class="post-skeleton">
-      <div class="skeleton-header">
-        <div class="skeleton-meta"></div>
-        <div class="skeleton-title"></div>
-        <div class="skeleton-date"></div>
-      </div>
-      <div class="skeleton-image"></div>
-      <div class="skeleton-content"></div>
-      <div class="skeleton-author"></div>
-    </div>
-
-    <!-- Mensaje de error (oculto por defecto) -->
-    <div id="error-message" style="display: none; text-align: center; padding: 50px 20px;">
-      <h2>Post no encontrado</h2>
-      <p>El post que buscas no existe o ha sido removido.</p>
-      <a href="blog.html" class="btn btn-primary">Volver al Blog</a>
-    </div>
-
     <article class="blog-post">
-      <!-- Header del post con layout de dos columnas -->
       <div class="post-header">
         <div class="post-header-content">
           <div class="post-meta">
             <a href="blog.html">Blog</a>
             <span class="separator">•</span>
-            <span id="postCategory">Categoría 1</span>
+            <span id="postCategory"><span class="skeleton skeleton-text" id="skel-category"></span></span>
           </div>
-          <h1 class="post-title" id="postTitle"></h1>
-          <time id="postDate" class="post-date"></time>
+          <h1 class="post-title" id="postTitle"><span class="skeleton skeleton-title" id="skel-title"></span></h1>
+          <time id="postDate" class="post-date"><span class="skeleton skeleton-text" id="skel-date"></span></time>
         </div>
         <div class="post-header-image">
-          <img id="postImage" src="https://placehold.co/800x500/676072/FFFFFF?text=Imagen+Principal" alt="Imagen del post">
+          <span class="skeleton skeleton-img" id="skel-img"></span>
+          <img id="postImage" src="https://placehold.co/800x500/676072/FFFFFF?text=Imagen+Principal" alt="Imagen del post" style="display:none;">
         </div>
       </div>
-
-      <!-- Contenedor principal con sidebar -->
       <div class="post-main-container">
-        <!-- Contenido principal -->
         <div class="post-content" id="postContent">
-          <!-- El contenido se cargará dinámicamente -->
+          <span class="skeleton skeleton-content" id="skel-content"></span>
         </div>
-
-        <!-- Sidebar -->
         <aside class="post-sidebar">
-          <!-- Publicidad -->
+          <div class="post-author">
+            <h2>Autor</h2>
+            <div class="author-info">
+              <span class="skeleton skeleton-avatar" id="skel-author-img"></span>
+              <img id="authorImage" src="https://placehold.co/100x100/676072/FFFFFF?text=Autor" alt="" style="display:none;">
+              <span id="authorName"><span class="skeleton skeleton-text" id="skel-author"></span></span>
+            </div>
+          </div>
           <div class="post-ad">
             <h2>Publicidad</h2>
             <div class="ad-container">
               <img id="adImage" src="https://placehold.co/250x200/676072/FFFFFF?text=Publicidad" alt="Publicidad">
             </div>
           </div>
-
-          <!-- Compartir -->
           <div class="post-share">
             <h2>Compartir este artículo</h2>
             <div class="share-buttons">
@@ -108,19 +90,8 @@
               </button>
             </div>
           </div>
-
-          <!-- Autor -->
-          <div class="post-author">
-            <h2>Autor</h2>
-            <div class="author-info">
-              <img id="authorImage" src="https://placehold.co/100x100/676072/FFFFFF?text=Autor" alt="">
-              <span id="authorName"></span>
-            </div>
-          </div>
         </aside>
       </div>
-
-      <!-- Navegación entre posts -->
       <div class="post-navigation">
         <a href="#" class="nav-link prev" id="prevPost">
           <i class="ri-arrow-left-line"></i>
@@ -137,12 +108,9 @@
           <i class="ri-arrow-right-line"></i>
         </a>
       </div>
-
-      <!-- Posts relacionados -->
       <section class="related-posts">
         <h2>Publicaciones relacionadas</h2>
         <div class="related-posts-grid">
-          <!-- Post relacionado 1 -->
           <a href="blog-post.html?id=2" class="blog-card">
             <figure class="blog-card-image">
               <img src="https://placehold.co/400x300/676072/FFFFFF?text=Jornada+de+Adopción" alt="Historia de éxito 2">
@@ -156,7 +124,6 @@
               </div>
             </div>
           </a>
-          <!-- Post relacionado 2 -->
           <a href="blog-post.html?id=3" class="blog-card">
             <figure class="blog-card-image">
               <img src="https://placehold.co/400x300/AD4656/FFFFFF?text=BOCO+en+Noticias" alt="Historia de éxito 3">
@@ -170,7 +137,6 @@
               </div>
             </div>
           </a>
-          <!-- Post relacionado 3 -->
           <a href="blog-post.html?id=4" class="blog-card">
             <figure class="blog-card-image">
               <img src="https://placehold.co/400x300/FF678D/FFFFFF?text=Campaña+de+Vacunación" alt="Historia de éxito 4">
@@ -189,7 +155,6 @@
     </article>
   </main>
 
-  <!-- #FOOTER -->
   <footer>
     <div class="footer-cta">
       <div class="footer-cta-content">
@@ -245,7 +210,6 @@
     </div>
   </footer>
 
-  <!-- AÑO AUTOMATICO EN EL FOOTER -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
