@@ -72,7 +72,7 @@ function showError(message) {
 
 // Función para actualizar el contenido del post
 function updatePostContent(post) {
-  // Ocultar skeletons y mostrar contenido real después de 3 segundos
+  // Ocultar skeletons y mostrar contenido real después de un pequeño delay
   setTimeout(() => {
     const skelCategory = document.getElementById('skel-category');
     const skelTitle = document.getElementById('skel-title');
@@ -90,22 +90,12 @@ function updatePostContent(post) {
     if (skelAuthorImg) skelAuthorImg.style.display = 'none';
     if (skelAuthor) skelAuthor.style.display = 'none';
 
-    // Mostrar los elementos reales TODOS juntos
+    // Mostrar los elementos reales
     const postImage = document.getElementById('postImage');
     if (postImage) postImage.style.display = '';
     const authorImage = document.getElementById('authorImage');
     if (authorImage) authorImage.style.display = '';
-    const authorName = document.getElementById('authorName');
-    if (authorName) authorName.style.display = '';
-    const postTitle = document.getElementById('postTitle');
-    if (postTitle) postTitle.style.display = '';
-    const postDate = document.getElementById('postDate');
-    if (postDate) postDate.style.display = '';
-    const postCategory = document.getElementById('postCategory');
-    if (postCategory) postCategory.style.display = '';
-    const postContent = document.getElementById('postContent');
-    if (postContent) postContent.style.display = '';
-  }, 3000);
+  }, 800);
 
   // Actualizar título de la página
   document.title = `${post.title} - BOCO Blog`;
@@ -126,21 +116,9 @@ function updatePostContent(post) {
   }
   
   // Actualizar imagen principal
-  const postImage = document.getElementById('postImage');
-  const skelImg = document.getElementById('skel-img');
   if (postImage && post.main_image) {
     postImage.src = post.main_image;
     postImage.alt = post.title;
-    postImage.onload = () => {
-      // Ocultar skeleton de imagen y mostrar imagen real
-      if (skelImg) skelImg.style.display = 'none';
-      postImage.style.display = '';
-    };
-    // Si la imagen ya está en caché y cargada
-    if (postImage.complete) {
-      if (skelImg) skelImg.style.display = 'none';
-      postImage.style.display = '';
-    }
   }
   
   // Actualizar contenido del post
@@ -151,7 +129,6 @@ function updatePostContent(post) {
   
   // Actualizar autor
   const authorName = document.getElementById('authorName');
-  const authorImage = document.getElementById('authorImage');
   if (authorName) {
     authorName.textContent = post.author;
   }
