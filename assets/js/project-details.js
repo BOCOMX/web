@@ -108,10 +108,18 @@ function updateGallery(gallery) {
     `).join('');
   }
   
-  // Reinicializar Swiper si existe
+  // Reinicializar Swiper para que la paginación coincida
   if (window.swiper) {
-    window.swiper.update();
+    window.swiper.destroy(true, true);
   }
+  window.swiper = new Swiper('.pd-gallery-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 }
 
 // Función para cargar más proyectos (excluyendo el actual)
