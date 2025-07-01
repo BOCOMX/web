@@ -1600,7 +1600,7 @@ header button[aria-label="Toggle menu"] {
   left: 0;
   top: 0.2em;
   font-size: 1em;
-  content: '\ea71'; /* Unicode de ri-circle-fill */
+  content: '\f3c1'; /* Unicode de ri-circle-fill */
   color: #FF678D;
 }
 
