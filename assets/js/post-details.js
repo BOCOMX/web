@@ -126,7 +126,7 @@ function updatePostContent(post) {
       if (skelImg) skelImg.style.display = 'none';
       postImage.style.display = '';
       // Esperar 1 segundo y mostrar los textos
-      setTimeout(showTextContent, 1000);
+      setTimeout(showTextContent, 3000);
     };
     // Si la imagen ya está en caché y cargada
     if (postImage.complete) {
