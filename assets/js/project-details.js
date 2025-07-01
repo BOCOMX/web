@@ -108,18 +108,23 @@ function updateGallery(gallery) {
     `).join('');
   }
   
-  // Reinicializar Swiper para que la paginación coincida
-  if (window.swiper) {
+  // Destruir Swiper si ya existe
+  if (window.swiper && typeof window.swiper.destroy === 'function') {
     window.swiper.destroy(true, true);
+    window.swiper = null;
   }
-  window.swiper = new Swiper('.pd-gallery-slider', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+  
+  // Inicializar Swiper SOLO si hay slides
+  if (gallery.length > 0) {
+    window.swiper = new Swiper('.pd-gallery-slider', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
 }
 
 // Función para cargar más proyectos (excluyendo el actual)
