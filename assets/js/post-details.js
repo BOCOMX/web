@@ -72,6 +72,29 @@ function showError(message) {
 
 // Función para actualizar el contenido del post
 function updatePostContent(post) {
+  // Ocultar skeletons y mostrar contenido real
+  const skelCategory = document.getElementById('skel-category');
+  const skelTitle = document.getElementById('skel-title');
+  const skelDate = document.getElementById('skel-date');
+  const skelImg = document.getElementById('skel-img');
+  const skelContent = document.getElementById('skel-content');
+  const skelAuthorImg = document.getElementById('skel-author-img');
+  const skelAuthor = document.getElementById('skel-author');
+
+  if (skelCategory) skelCategory.style.display = 'none';
+  if (skelTitle) skelTitle.style.display = 'none';
+  if (skelDate) skelDate.style.display = 'none';
+  if (skelImg) skelImg.style.display = 'none';
+  if (skelContent) skelContent.style.display = 'none';
+  if (skelAuthorImg) skelAuthorImg.style.display = 'none';
+  if (skelAuthor) skelAuthor.style.display = 'none';
+
+  // Mostrar los elementos reales
+  const postImage = document.getElementById('postImage');
+  if (postImage) postImage.style.display = '';
+  const authorImage = document.getElementById('authorImage');
+  if (authorImage) authorImage.style.display = '';
+
   // Actualizar título de la página
   document.title = `${post.title} - BOCO Blog`;
   
@@ -91,7 +114,6 @@ function updatePostContent(post) {
   }
   
   // Actualizar imagen principal
-  const postImage = document.getElementById('postImage');
   if (postImage && post.main_image) {
     postImage.src = post.main_image;
     postImage.alt = post.title;
@@ -105,7 +127,6 @@ function updatePostContent(post) {
   
   // Actualizar autor
   const authorName = document.getElementById('authorName');
-  const authorImage = document.getElementById('authorImage');
   if (authorName) {
     authorName.textContent = post.author;
   }
