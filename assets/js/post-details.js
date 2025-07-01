@@ -174,6 +174,10 @@ function updatePostNavigation(posts, currentIndex) {
   const prevLink = document.getElementById('prevPost');
   const nextLink = document.getElementById('nextPost');
 
+  // Limpiar clases only-link
+  prevLink.classList.remove('only-link');
+  nextLink.classList.remove('only-link');
+
   // Anterior
   if (prevPost) {
     prevLink.style.display = '';
@@ -190,6 +194,14 @@ function updatePostNavigation(posts, currentIndex) {
     nextLink.querySelector('h4').textContent = nextPost.title;
   } else {
     nextLink.style.display = 'none';
+  }
+
+  // Si solo hay uno visible, ponerle la clase only-link
+  if (!prevPost && nextPost) {
+    nextLink.classList.add('only-link');
+  }
+  if (prevPost && !nextPost) {
+    prevLink.classList.add('only-link');
   }
 }
 
