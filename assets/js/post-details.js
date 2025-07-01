@@ -72,40 +72,29 @@ function showError(message) {
 
 // Función para actualizar el contenido del post
 function updatePostContent(post) {
-  // Mostrar skeletons al menos 2 segundos y hasta que la imagen esté cargada
-  let minDelayPassed = false;
+  // Mostrar skeletons de todo al inicio
   let imageLoaded = false;
 
-  function showContentIfReady() {
-    if (minDelayPassed && imageLoaded) {
-      const skelCategory = document.getElementById('skel-category');
-      const skelTitle = document.getElementById('skel-title');
-      const skelDate = document.getElementById('skel-date');
-      const skelImg = document.getElementById('skel-img');
-      const skelContent = document.getElementById('skel-content');
-      const skelAuthorImg = document.getElementById('skel-author-img');
-      const skelAuthor = document.getElementById('skel-author');
+  // Función para mostrar los textos después de la imagen
+  function showTextContent() {
+    const skelCategory = document.getElementById('skel-category');
+    const skelTitle = document.getElementById('skel-title');
+    const skelDate = document.getElementById('skel-date');
+    const skelContent = document.getElementById('skel-content');
+    const skelAuthorImg = document.getElementById('skel-author-img');
+    const skelAuthor = document.getElementById('skel-author');
 
-      if (skelCategory) skelCategory.style.display = 'none';
-      if (skelTitle) skelTitle.style.display = 'none';
-      if (skelDate) skelDate.style.display = 'none';
-      if (skelImg) skelImg.style.display = 'none';
-      if (skelContent) skelContent.style.display = 'none';
-      if (skelAuthorImg) skelAuthorImg.style.display = 'none';
-      if (skelAuthor) skelAuthor.style.display = 'none';
+    if (skelCategory) skelCategory.style.display = 'none';
+    if (skelTitle) skelTitle.style.display = 'none';
+    if (skelDate) skelDate.style.display = 'none';
+    if (skelContent) skelContent.style.display = 'none';
+    if (skelAuthorImg) skelAuthorImg.style.display = 'none';
+    if (skelAuthor) skelAuthor.style.display = 'none';
 
-      // Mostrar los elementos reales
-      const postImage = document.getElementById('postImage');
-      if (postImage) postImage.style.display = '';
-      const authorImage = document.getElementById('authorImage');
-      if (authorImage) authorImage.style.display = '';
-    }
+    // Mostrar los elementos reales
+    const authorImage = document.getElementById('authorImage');
+    if (authorImage) authorImage.style.display = '';
   }
-
-  setTimeout(() => {
-    minDelayPassed = true;
-    showContentIfReady();
-  }, 2000);
 
   // Actualizar título de la página
   document.title = `${post.title} - BOCO Blog`;
@@ -127,17 +116,24 @@ function updatePostContent(post) {
   
   // Actualizar imagen principal
   const postImage = document.getElementById('postImage');
+  const skelImg = document.getElementById('skel-img');
   if (postImage && post.main_image) {
     postImage.src = post.main_image;
     postImage.alt = post.title;
     postImage.onload = () => {
       imageLoaded = true;
-      showContentIfReady();
+      // Ocultar skeleton de imagen y mostrar imagen real
+      if (skelImg) skelImg.style.display = 'none';
+      postImage.style.display = '';
+      // Esperar 1 segundo y mostrar los textos
+      setTimeout(showTextContent, 1000);
     };
     // Si la imagen ya está en caché y cargada
     if (postImage.complete) {
       imageLoaded = true;
-      showContentIfReady();
+      if (skelImg) skelImg.style.display = 'none';
+      postImage.style.display = '';
+      setTimeout(showTextContent, 1000);
     }
   }
   
