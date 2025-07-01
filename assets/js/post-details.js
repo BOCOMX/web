@@ -72,29 +72,39 @@ function showError(message) {
 
 // Función para actualizar el contenido del post
 function updatePostContent(post) {
-  // Ocultar skeletons y mostrar contenido real después de un pequeño delay
+  // Mostrar skeletons al menos 2 segundos y hasta que la imagen esté cargada
+  let minDelayPassed = false;
+  let imageLoaded = false;
+
+  function showContentIfReady() {
+    if (minDelayPassed && imageLoaded) {
+      const skelCategory = document.getElementById('skel-category');
+      const skelTitle = document.getElementById('skel-title');
+      const skelDate = document.getElementById('skel-date');
+      const skelImg = document.getElementById('skel-img');
+      const skelContent = document.getElementById('skel-content');
+      const skelAuthorImg = document.getElementById('skel-author-img');
+      const skelAuthor = document.getElementById('skel-author');
+
+      if (skelCategory) skelCategory.style.display = 'none';
+      if (skelTitle) skelTitle.style.display = 'none';
+      if (skelDate) skelDate.style.display = 'none';
+      if (skelImg) skelImg.style.display = 'none';
+      if (skelContent) skelContent.style.display = 'none';
+      if (skelAuthorImg) skelAuthorImg.style.display = 'none';
+      if (skelAuthor) skelAuthor.style.display = 'none';
+
+      // Mostrar los elementos reales
+      const postImage = document.getElementById('postImage');
+      if (postImage) postImage.style.display = '';
+      const authorImage = document.getElementById('authorImage');
+      if (authorImage) authorImage.style.display = '';
+    }
+  }
+
   setTimeout(() => {
-    const skelCategory = document.getElementById('skel-category');
-    const skelTitle = document.getElementById('skel-title');
-    const skelDate = document.getElementById('skel-date');
-    const skelImg = document.getElementById('skel-img');
-    const skelContent = document.getElementById('skel-content');
-    const skelAuthorImg = document.getElementById('skel-author-img');
-    const skelAuthor = document.getElementById('skel-author');
-
-    if (skelCategory) skelCategory.style.display = 'none';
-    if (skelTitle) skelTitle.style.display = 'none';
-    if (skelDate) skelDate.style.display = 'none';
-    if (skelImg) skelImg.style.display = 'none';
-    if (skelContent) skelContent.style.display = 'none';
-    if (skelAuthorImg) skelAuthorImg.style.display = 'none';
-    if (skelAuthor) skelAuthor.style.display = 'none';
-
-    // Mostrar los elementos reales
-    const postImage = document.getElementById('postImage');
-    if (postImage) postImage.style.display = '';
-    const authorImage = document.getElementById('authorImage');
-    if (authorImage) authorImage.style.display = '';
+    minDelayPassed = true;
+    showContentIfReady();
   }, 2000);
 
   // Actualizar título de la página
@@ -116,9 +126,19 @@ function updatePostContent(post) {
   }
   
   // Actualizar imagen principal
+  const postImage = document.getElementById('postImage');
   if (postImage && post.main_image) {
     postImage.src = post.main_image;
     postImage.alt = post.title;
+    postImage.onload = () => {
+      imageLoaded = true;
+      showContentIfReady();
+    };
+    // Si la imagen ya está en caché y cargada
+    if (postImage.complete) {
+      imageLoaded = true;
+      showContentIfReady();
+    }
   }
   
   // Actualizar contenido del post
@@ -129,6 +149,7 @@ function updatePostContent(post) {
   
   // Actualizar autor
   const authorName = document.getElementById('authorName');
+  const authorImage = document.getElementById('authorImage');
   if (authorName) {
     authorName.textContent = post.author;
   }
