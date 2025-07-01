@@ -72,14 +72,12 @@ function showError(message) {
 
 // Función para actualizar el contenido del post
 function updatePostContent(post) {
-  // Mostrar skeletons de todo al inicio
-  let imageLoaded = false;
-
-  // Función para mostrar los textos después de la imagen
-  function showTextContent() {
+  // Ocultar skeletons y mostrar contenido real después de 3 segundos
+  setTimeout(() => {
     const skelCategory = document.getElementById('skel-category');
     const skelTitle = document.getElementById('skel-title');
     const skelDate = document.getElementById('skel-date');
+    const skelImg = document.getElementById('skel-img');
     const skelContent = document.getElementById('skel-content');
     const skelAuthorImg = document.getElementById('skel-author-img');
     const skelAuthor = document.getElementById('skel-author');
@@ -87,14 +85,17 @@ function updatePostContent(post) {
     if (skelCategory) skelCategory.style.display = 'none';
     if (skelTitle) skelTitle.style.display = 'none';
     if (skelDate) skelDate.style.display = 'none';
+    if (skelImg) skelImg.style.display = 'none';
     if (skelContent) skelContent.style.display = 'none';
     if (skelAuthorImg) skelAuthorImg.style.display = 'none';
     if (skelAuthor) skelAuthor.style.display = 'none';
 
     // Mostrar los elementos reales
+    const postImage = document.getElementById('postImage');
+    if (postImage) postImage.style.display = '';
     const authorImage = document.getElementById('authorImage');
     if (authorImage) authorImage.style.display = '';
-  }
+  }, 3000);
 
   // Actualizar título de la página
   document.title = `${post.title} - BOCO Blog`;
@@ -121,19 +122,14 @@ function updatePostContent(post) {
     postImage.src = post.main_image;
     postImage.alt = post.title;
     postImage.onload = () => {
-      imageLoaded = true;
       // Ocultar skeleton de imagen y mostrar imagen real
       if (skelImg) skelImg.style.display = 'none';
       postImage.style.display = '';
-      // Esperar 1 segundo y mostrar los textos
-      setTimeout(showTextContent, 3000);
     };
     // Si la imagen ya está en caché y cargada
     if (postImage.complete) {
-      imageLoaded = true;
       if (skelImg) skelImg.style.display = 'none';
       postImage.style.display = '';
-      setTimeout(showTextContent, 1000);
     }
   }
   
