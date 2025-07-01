@@ -191,14 +191,6 @@ function updatePostNavigation(posts, currentIndex) {
   } else {
     nextLink.style.display = 'none';
   }
-
-  // Alinear a la izquierda si solo hay un enlace visible
-  const navLinks = document.querySelectorAll('.post-navigation .nav-link');
-  navLinks.forEach(link => link.classList.remove('only-link'));
-  const visibles = Array.from(navLinks).filter(link => link.style.display !== 'none');
-  if (visibles.length === 1) {
-    visibles[0].classList.add('only-link');
-  }
 }
 
 // Función para manejar botones de compartir
