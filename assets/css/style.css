@@ -2771,11 +2771,6 @@ body:not(.proyectos-page) .allies-section {
   text-align: right;
 }
 
-/* Si solo hay un enlace visible, que quede a la izquierda */
-.post-navigation .nav-link:only-child {
-  flex-basis: 100%;
-  text-align: left;
-}
 
 .nav-link {
   display: flex;
