@@ -46,3 +46,13 @@ collections:
       - {label: "Galería de Fotos", name: "gallery", widget: "list", hint: "Agrega fotos del proyecto (ideal 640x300px cada una)", fields: [{label: "Foto", name: "image", widget: "image", hint: "Foto del proyecto - ideal 640x300px"}]}
       - {label: "Descripción del Proyecto", name: "description", widget: "markdown", hint: "Descripción completa del proyecto"}
       - {label: "Participantes", name: "participants", widget: "list", hint: "Personas que participaron en el proyecto", fields: [{label: "Nombre", name: "name", widget: "string"}, {label: "Avatar (100x100px)", name: "avatar", widget: "image", hint: "Foto del participante - ideal 100x100px"}]}
+
+  - name: "publicidad"
+    label: "Publicidad"
+    folder: "_publicidad"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Imagen de Publicidad (250x200px)", name: "imagen", widget: "image", hint: "Imagen de la publicidad - ideal 250x200px", choose_url: false, multiple: false, media_library: {config: {multiple: false}}}
+      - {label: "Enlace de destino", name: "enlace", widget: "string", hint: "URL a la que se abrirá al hacer clic (debe iniciar con https://)"}
+      - {label: "Activa", name: "activa", widget: "boolean", default: true, hint: "¿Mostrar esta publicidad?"}
