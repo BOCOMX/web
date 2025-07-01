@@ -3521,3 +3521,8 @@ body:not(.proyectos-page) .allies-section {
     border-radius: 8px !important;
   }
 }
+
+.post-navigation .nav-link.only-link {
+  flex-basis: 100%;
+  text-align: left;
+}
