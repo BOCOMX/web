@@ -30,7 +30,8 @@ async function loadPostDetails() {
 
   try {
     const posts = await fetchBlogPosts();
-    const post = posts.find(p => p.slug === slug);
+    const postIndex = posts.findIndex(p => p.slug === slug);
+    const post = posts[postIndex];
     
     if (!post) {
       showError('Post no encontrado');
@@ -39,6 +40,7 @@ async function loadPostDetails() {
 
     updatePostContent(post);
     loadRelatedPosts(post.slug, posts);
+    updatePostNavigation(posts, postIndex);
     
   } catch (error) {
     console.error('Error al cargar los detalles del post:', error);
@@ -161,6 +163,33 @@ function loadRelatedPosts(currentSlug, allPosts) {
         </div>
       </a>
     `).join('');
+  }
+}
+
+// Función para actualizar la navegación entre posts
+function updatePostNavigation(posts, currentIndex) {
+  const prevPost = posts[currentIndex - 1];
+  const nextPost = posts[currentIndex + 1];
+
+  const prevLink = document.getElementById('prevPost');
+  const nextLink = document.getElementById('nextPost');
+
+  // Anterior
+  if (prevPost) {
+    prevLink.style.display = '';
+    prevLink.href = `post.html?slug=${prevPost.slug}`;
+    prevLink.querySelector('h4').textContent = prevPost.title;
+  } else {
+    prevLink.style.display = 'none';
+  }
+
+  // Siguiente
+  if (nextPost) {
+    nextLink.style.display = '';
+    nextLink.href = `post.html?slug=${nextPost.slug}`;
+    nextLink.querySelector('h4').textContent = nextPost.title;
+  } else {
+    nextLink.style.display = 'none';
   }
 }
 
