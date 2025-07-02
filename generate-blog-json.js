@@ -43,6 +43,18 @@ function formatDate(dateString) {
   });
 }
 
+// Función para convertir título a slug válido
+function titleToSlug(title) {
+  return title
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Remover acentos
+    .replace(/[^a-z0-9\s-]/g, '') // Solo letras, números, espacios y guiones
+    .replace(/\s+/g, '-') // Espacios a guiones
+    .replace(/-+/g, '-') // Múltiples guiones a uno solo
+    .trim('-'); // Remover guiones al inicio y final
+}
+
 // Función para leer y procesar archivos markdown del blog
 function processBlogFiles() {
   const postsDir = path.join(__dirname, '_posts');
@@ -57,8 +69,8 @@ function processBlogFiles() {
         const content = fs.readFileSync(filePath, 'utf8');
         const { data, content: markdownContent } = matter(content);
         
-        // Generar slug desde el nombre del archivo
-        const slug = file.replace('.md', '');
+        // Generar slug desde el título del post
+        const slug = titleToSlug(data.title);
         
         // Convertir markdown a HTML para el contenido
         const contentHtml = markdownToHtml(markdownContent);
