@@ -14,6 +14,18 @@ function markdownToHtml(markdown) {
     .replace(/^(.+)$/m, '<p>$1</p>'); // Envolver en párrafos si no está ya
 }
 
+// Función para convertir título a slug válido
+function titleToSlug(title) {
+  return title
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Remover acentos
+    .replace(/[^a-z0-9\s-]/g, '') // Solo letras, números, espacios y guiones
+    .replace(/\s+/g, '-') // Espacios a guiones
+    .replace(/-+/g, '-') // Múltiples guiones a uno solo
+    .trim('-'); // Remover guiones al inicio y final
+}
+
 // Función para leer y procesar archivos markdown
 function processMarkdownFiles() {
   const proyectosDir = path.join(__dirname, '_proyectos');
@@ -28,8 +40,8 @@ function processMarkdownFiles() {
         const content = fs.readFileSync(filePath, 'utf8');
         const { data, content: markdownContent } = matter(content);
         
-        // Generar slug desde el nombre del archivo
-        const slug = file.replace('.md', '');
+        // Generar slug desde el título del proyecto
+        const slug = titleToSlug(data.title);
         
         // Convertir markdown a HTML para la descripción
         const descriptionHtml = markdownToHtml(data.description);
