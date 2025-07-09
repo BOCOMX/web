@@ -10,7 +10,19 @@ gallery:
   - image: /assets/images/blog/1.png
   - image: /assets/images/blog/2.png
   - image: /assets/images/blog/3.png
-description: C﻿AMPAÑA PRUEBA
+description: >-
+  Realizamos campañas de esterilización a bajo costo, accesibles para toda la
+  comunidad de la zona de Los Tuxtlas. Nuestro objetivo principal es frenar la
+  sobrepoblación de perros y gatos, disminuyendo así el abandono y evitando que
+  más animales terminen viviendo en las calles.
+
+
+  La esterilización no solo es una medida de control, sino una herramienta poderosa para mejorar la calidad de vida de las mascotas y sus familias. Ayuda a prevenir enfermedades graves como el cáncer reproductivo, mejora el comportamiento y reduce el riesgo de peleas o fugas.
+
+
+  Con cada jornada, contribuimos a construir un entorno más seguro, saludable y responsable para todos.
+
+  **Esterilizar es cuidar, es prevenir, es amar.**
 participants:
   - name: Fabián
     avatar: /assets/images/blog/perfil.png
