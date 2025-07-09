@@ -3661,3 +3661,8 @@ body:not(.proyectos-page) .allies-section {
     border-radius: 16px;
   }
 }
+
+.pd-desc p {
+  margin-bottom: 1.2em;
+  margin-top: 0;
+}
