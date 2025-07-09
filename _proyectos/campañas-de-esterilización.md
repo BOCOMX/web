@@ -17,6 +17,8 @@ description: >-
   más animales terminen viviendo en las calles.
 
 
+
+
   La esterilización no solo es una medida de control, sino una herramienta poderosa para mejorar la calidad de vida de las mascotas y sus familias. Ayuda a prevenir enfermedades graves como el cáncer reproductivo, mejora el comportamiento y reduce el riesgo de peleas o fugas.
 
 
