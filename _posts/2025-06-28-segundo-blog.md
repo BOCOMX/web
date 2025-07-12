@@ -7,8 +7,9 @@ author_avatar: /assets/images/blog/boco.png
 main_image: /assets/images/blog/boco-noticias.png
 image_2: ""
 thumbnail: /assets/images/blog/portada-boco-noticias.png
-excerpt: Este es un extracto de mi primer blog que describe la historia de cómo
-  comenzamos nuestra misión de ayudar a los animales.
+excerpt: BOCO fue mencionado en una nota del medio local Al Día Noticias, donde
+  se visibilizó el problema del abandono y maltrato animal en San Andrés Tuxtla,
+  así como el trabajo que venimos realizando desde noviembre del año pasado.
 categoria: Noticias
 tags:
   - rescate
