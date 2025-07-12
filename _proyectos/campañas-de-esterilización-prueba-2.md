@@ -5,7 +5,7 @@ orden: 2
 tipo: boco
 destacado: true
 main_image: /assets/images/blog/campana-vacunacion-cover.png
-thumbnail: /assets/images/blog/camapañasdeesterilizacion.png
+thumbnail: /assets/images/blog/portada-vacunacion.png
 gallery:
   - image: /assets/images/blog/campana-vacunacion-1.png
   - image: /assets/images/blog/campana-vacunacion-2.png
