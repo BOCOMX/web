@@ -20,7 +20,8 @@ description: >-
   La esterilización no solo es una medida de control, sino una herramienta poderosa para mejorar la calidad de vida de las mascotas y sus familias. Ayuda a prevenir enfermedades graves como el cáncer reproductivo, mejora el comportamiento y reduce el riesgo de peleas o fugas.
 
 
-  Con cada jornada, contribuimos a construir un entorno más seguro, saludable y responsable para todos.\
+  Con cada jornada, contribuimos a construir un entorno más seguro, saludable y responsable para todos.
+
 
   **Esterilizar es cuidar, es prevenir, es amar.**
 participants:
