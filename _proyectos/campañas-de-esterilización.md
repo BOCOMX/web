@@ -5,7 +5,7 @@ orden: 1
 tipo: boco
 destacado: true
 main_image: /assets/images/blog/campana-esterilizacion-cover.png
-thumbnail: /assets/images/blog/camapañasdeesterilizacion.png
+thumbnail: /assets/images/blog/portada-esterilizacion.png
 gallery:
   - image: /assets/images/blog/campana-esterilizacion-1.png
   - image: /assets/images/blog/campana-esterilizacion-2.png
