@@ -18,7 +18,7 @@ description: >-
   cuidado temporal.
 
 
-  Cuando realizamos un rescate, nos aseguramos de que la mascota reciba atención médica, alimento, protección y, en algunos casos, un hogar temporal mientras se recupera y se prepara para ser integrada a nuestras ***[Jornadas de Adopción](/detalles.html?slug=jornadas-de-adopcion)***.
+  Cuando realizamos un rescate, nos aseguramos de que la mascota reciba atención médica, alimento, protección y, en algunos casos, un hogar temporal mientras se recupera y se prepara para ser integrada a nuestras ***Jornadas de Adopción***.
 
 
   Aunque no somos un albergue, hacemos todo lo posible por dar una segunda oportunidad a quienes más lo necesitan, con el apoyo de voluntarios, hogares temporales y la comunidad.
