@@ -18,5 +18,4 @@ BOCO ha alcanzado un nuevo hito en su labor por el bienestar animal: **hemos com
 
 Cada jornada es posible gracias al esfuerzo colectivo de voluntarios, familias responsables y personas que creen en el poder de la acción comunitaria. Con cada mascota esterilizada, damos un paso hacia una ciudad más empática, consciente y comprometida con sus animales.
 
-A todos los que han apoyado, difundido, donado o participado:\
-**gracias por ser parte del cambio.** Seguiremos trabajando para que cada campaña sume esperanza y transforme vidas.
+A todos los que han apoyado, difundido, donado o participado: **Gracias por ser parte del cambio.** Seguiremos trabajando para que cada campaña sume esperanza y transforme vidas.
