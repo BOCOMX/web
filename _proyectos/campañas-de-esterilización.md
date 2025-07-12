@@ -29,6 +29,6 @@ participants:
     avatar: /assets/images/blog/boco.png
   - name: Yoel Rocha
     avatar: /assets/images/blog/yoel.png
-  - name: Veterinaría La Granja
+  - name: Veterinaria La Granja
     avatar: /assets/images/blog/veterinaria-la-granja.png
 ---
