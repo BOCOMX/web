@@ -1,54 +1,29 @@
 ---
 layout: blog-post
-title: Segundo BLOG PRUEBA 134
-date: 2025-06-28
+title: BOCO en las Noticias
+date: 2023-10-04
 author: BOCO
-author_avatar: /assets/images/blog/perfil.png
-main_image: /assets/images/blog/1.png
-image_2: /assets/images/blog/2.png
-thumbnail: /assets/images/blog/1.png
+author_avatar: /assets/images/blog/boco.png
+main_image: /assets/images/blog/boco-noticias.png
+image_2: ""
+thumbnail: /assets/images/blog/portada-boco-noticias.png
 excerpt: Este es un extracto de mi primer blog que describe la historia de cómo
   comenzamos nuestra misión de ayudar a los animales.
-categoria: Historias
+categoria: Noticias
 tags:
   - rescate
   - adopción
   - bienestar animal
 ---
-Bienvenidos a nuestro primer blog post. Hoy queremos compartir con ustedes la historia de cómo comenzó todo.
+BOCO fue mencionado en una nota del medio local **“Al Día Noticias”**, donde se visibilizó el problema del abandono y maltrato animal en San Andrés Tuxtla, así como el trabajo que venimos realizando desde noviembre del año pasado.
 
-## El inicio de BOCO
+En palabras de **Abigaíl**, autora de la nota:
 
-Todo comenzó cuando un grupo de amigos decidimos que era momento de hacer algo por los animales que viven en las calles. Nos dimos cuenta de que había una necesidad real en nuestra comunidad.
+> *“En San Andrés Tuxtla abundan los casos de maltrato animal y abandono... Algunos se han hecho virales, mientras que miles jamás serán visibles. También es común que se les abandone, dejándolos a su suerte por las calles...”*
 
-### Nuestra misión
+Nuestro fundador, **Fabián Soto**, fue entrevistado y compartió que desde el inicio del proyecto hemos ayudado a varios animalitos con nuestros propios recursos: donando camitas, organizando campañas de esterilización, ofreciendo alimento y cuidando temporalmente a los que podemos.
 
-Nuestra misión es simple pero poderosa: **ayudar a los animales que más lo necesitan**. Esto incluye:
+Agradecemos profundamente al medio y a **Abigaíl** por ayudarnos a darle voz a quienes no la tienen.\
+**Cada palabra compartida es un paso más hacia una comunidad más empática.**
 
-* Rescatar animales en situación de calle
-* Facilitar adopciones responsables
-* Educar sobre el bienestar animal
-* Organizar campañas de esterilización
-
-## Los primeros pasos
-
-Los primeros meses fueron difíciles, pero cada pequeño logro nos motivaba a seguir adelante. Recuerdo especialmente el día que rescatamos a **Luna**, una perrita que se convirtió en nuestra primera historia de éxito.
-
-### Lo que hemos logrado
-
-En este tiempo hemos logrado:
-
-1. **Más de 50 adopciones exitosas**
-2. **Campañas de esterilización mensuales**
-3. **Educación en escuelas locales**
-4. **Colaboraciones con veterinarias**
-
-## El futuro
-
-Tenemos grandes planes para el futuro. Queremos expandir nuestros servicios y llegar a más comunidades que necesiten nuestra ayuda.
-
-*¡Gracias por ser parte de esta hermosa misión!*
-
-- - -
-
-*Escrito por el Equipo BOCO*
+*Nota original publicada en la página de Facebook de Al Día Noticias, el Día Mundial de los Animales.*
