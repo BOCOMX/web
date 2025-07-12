@@ -29,6 +29,8 @@ participants:
     avatar: /assets/images/blog/boco.png
   - name: Yoel Rocha
     avatar: /assets/images/blog/yoel.png
+  - name: Jedet
+    avatar: /assets/images/blog/jedet.png
   - name: Fabián
     avatar: /assets/images/blog/fabián.png
 ---
