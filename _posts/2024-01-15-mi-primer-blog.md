@@ -1,54 +1,28 @@
 ---
 layout: blog-post
-title: Mi primer blog
-date: 2024-01-15T10:00:00.000Z
+title: Una historia que marcó el inicio de nuestro compromiso
+date: 2023-04-17
 author: BOCO
-author_avatar: /assets/images/blog/perfil.png
-main_image: /assets/images/blog/1.png
-image_2: /assets/images/blog/2.png
-thumbnail: /assets/images/blog/1.png
-excerpt: Este es un extracto de mi primer blog que describe la historia de cómo
-  comenzamos nuestra misión de ayudar a los animales.
+author_avatar: /assets/images/blog/boco.png
+main_image: /assets/images/blog/primer-rescate-head.png
+image_2: ""
+thumbnail: /assets/images/blog/portada-primer-rescate.png
+excerpt: Nuestro primer rescate fue tan duro como esperanzador. Encontramos a La
+  Negrita, una perrita en situación de calle que se encontraba atrapada en un
+  lugar cerrado, sin acceso a alimento ni ayuda.
 categoria: Historias
 tags:
   - rescate
   - adopción
   - bienestar animal
 ---
-Bienvenidos a nuestro primer blog post. Hoy queremos compartir con ustedes la historia de cómo comenzó todo.
+Nuestro primer rescate fue tan duro como esperanzador. Encontramos a **La Negrita**, una perrita en situación de calle que se encontraba atrapada en un lugar cerrado, sin acceso a alimento ni ayuda. No estaba sola: tenía consigo a varios cachorros recién nacidos, pero lamentablemente, debido al hambre y la desesperación, solo sobrevivieron cuatro: **Polar, Pardo, Panda y Cerberus**.
 
-## El inicio de BOCO
+Este caso nos marcó profundamente. No solo por la gravedad de la situación, sino porque representó el punto de partida de lo que hoy es BOCO.
 
-Todo comenzó cuando un grupo de amigos decidimos que era momento de hacer algo por los animales que viven en las calles. Nos dimos cuenta de que había una necesidad real en nuestra comunidad.
+Tras rescatar a La Negrita y a sus pequeños, se les dio baño, alimento, atención médica y mucho cariño. Gracias a la generosidad de personas solidarias, también consiguieron un **hogar temporal**, donde pudieron recuperarse, socializar y crecer con seguridad.
 
-### Nuestra misión
+Con el tiempo, cada uno de ellos fue **adoptado por familias responsables**, que hoy les brindan el amor y el cuidado que siempre merecieron.
 
-Nuestra misión es simple pero poderosa: **ayudar a los animales que más lo necesitan**. Esto incluye:
-
-* Rescatar animales en situación de calle
-* Facilitar adopciones responsables
-* Educar sobre el bienestar animal
-* Organizar campañas de esterilización
-
-## Los primeros pasos
-
-Los primeros meses fueron difíciles, pero cada pequeño logro nos motivaba a seguir adelante. Recuerdo especialmente el día que rescatamos a **Luna**, una perrita que se convirtió en nuestra primera historia de éxito.
-
-### Lo que hemos logrado
-
-En este tiempo hemos logrado:
-
-1. **Más de 50 adopciones exitosas**
-2. **Campañas de esterilización mensuales**
-3. **Educación en escuelas locales**
-4. **Colaboraciones con veterinarias**
-
-## El futuro
-
-Tenemos grandes planes para el futuro. Queremos expandir nuestros servicios y llegar a más comunidades que necesiten nuestra ayuda.
-
-*¡Gracias por ser parte de esta hermosa misión!*
-
-- - -
-
-*Escrito por el Equipo BOCO*
+Esta historia es un recordatorio de que, incluso en medio del abandono, la compasión puede cambiarlo todo.\
+**La Negrita y sus cachorros nos enseñaron que ayudar a uno… puede significar salvar a muchos.**
