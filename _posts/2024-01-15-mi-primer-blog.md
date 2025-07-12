@@ -24,5 +24,4 @@ Tras rescatar a La Negrita y a sus pequeños, se les dio baño, alimento, atenci
 
 Con el tiempo, cada uno de ellos fue **adoptado por familias responsables**, que hoy les brindan el amor y el cuidado que siempre merecieron.
 
-Esta historia es un recordatorio de que, incluso en medio del abandono, la compasión puede cambiarlo todo.\
-**La Negrita y sus cachorros nos enseñaron que ayudar a uno… puede significar salvar a muchos.**
+Esta historia es un recordatorio de que, incluso en medio del abandono, la compasión puede cambiarlo todo. **La Negrita y sus cachorros nos enseñaron que ayudar a uno… puede significar salvar a muchos.**
