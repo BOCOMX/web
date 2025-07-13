@@ -26,4 +26,4 @@ Nuestro fundador, **Fabián Soto**, fue entrevistado y compartió que desde el i
 
 Agradecemos profundamente al medio y a **Abigaíl** por ayudarnos a darle voz a quienes no la tienen. **Cada palabra compartida es un paso más hacia una comunidad más empática.**
 
-*Nota original publicada en la página de Facebook de Al Día Noticias, el Día Mundial de los Animales.*
+*Nota original publicada en la [página de Facebook de Al Día Noticias](https://www.facebook.com/share/p/16Xm7G7qge/ {blank}), el Día Mundial de los Animales.*
