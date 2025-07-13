@@ -3691,3 +3691,17 @@ blockquote cite {
   color: #888;
   font-style: normal;
 }
+
+/* --- ENLACES VISIBLES EN BLOG Y PROYECTOS --- */
+.post-content a, .pd-desc a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary);
+  transition: color 0.2s, border-bottom 0.2s;
+  padding-bottom: 1px;
+}
+
+.post-content a:hover, .pd-desc a:hover {
+  color: var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+}
