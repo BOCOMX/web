@@ -3666,3 +3666,28 @@ body:not(.proyectos-page) .allies-section {
   margin-bottom: 1.2em;
   margin-top: 0;
 }
+
+/* --- ESTILO PARA BLOCKQUOTE (CITAS) --- */
+blockquote {
+  border-left: 4px solid var(--primary);
+  background: #f8f9fa;
+  color: #333;
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  font-style: italic;
+  font-size: 1.15em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.95em;
+  color: #888;
+  font-style: normal;
+}
