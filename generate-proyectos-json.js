@@ -2,16 +2,40 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-// Función para convertir markdown a HTML (simplificada)
+// Función para convertir markdown a HTML (mejorada)
 function markdownToHtml(markdown) {
   if (!markdown) return '';
-  
-  return markdown
-    .replace(/\n\n/g, '</p><p>') // Dobles saltos de línea se convierten en párrafos
-    .replace(/\n/g, '<br>') // Saltos simples se convierten en <br>
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **texto** -> <strong>texto</strong>
-    .replace(/\*(.*?)\*/g, '<em>$1</em>') // *texto* -> <em>texto</em>
-    .replace(/^(.+)$/m, '<p>$1</p>'); // Envolver en párrafos si no está ya
+
+  let html = markdown;
+
+  // Procesar blockquotes (>)
+  html = html.replace(/^>\s?(.*)$/gim, '<blockquote>$1</blockquote>');
+
+  // Procesar enlaces con {blank} para target _blank
+  html = html.replace(/\[(.*?)\]\((.*?)(\s*\{blank\})?\)/g, (match, text, url, blank) => {
+    if (blank) {
+      return `<a href="${url}" target="_blank" rel="noopener">${text}</a>`;
+    } else {
+      return `<a href="${url}">${text}</a>`;
+    }
+  });
+
+  // Negritas y cursivas
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+             .replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+  // Párrafos dobles y saltos de línea
+  html = html.replace(/\n\n/g, '</p><p>')
+             .replace(/\n/g, '<br>');
+
+  // Envolver en párrafos si no está ya
+  html = html.replace(/^(.+)$/m, '<p>$1</p>');
+
+  // Limpiar <p> duplicados alrededor de blockquotes
+  html = html.replace(/<p>(\s*)<blockquote>/g, '<blockquote>');
+  html = html.replace(/<\/blockquote>(\s*)<\/p>/g, '</blockquote>');
+
+  return html;
 }
 
 // Función para convertir título a slug válido
