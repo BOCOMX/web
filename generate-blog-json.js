@@ -6,29 +6,44 @@ const matter = require('gray-matter');
 function markdownToHtml(markdown) {
   if (!markdown) return '';
 
+  let html = markdown;
+
+  // Procesar blockquotes (>)
+  html = html.replace(/^>\s?(.*)$/gim, '<blockquote>$1</blockquote>');
+
   // Procesar títulos
-  let html = markdown
+  html = html
     .replace(/^### (.*)$/gim, '<h3>$1</h3>')
     .replace(/^## (.*)$/gim, '<h2>$1</h2>')
-    .replace(/^# (.*)$/gim, '<h1>$1</h1>')
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+    .replace(/^# (.*)$/gim, '<h1>$1</h1>');
 
-  // Procesar listas no ordenadas
+  // Procesar enlaces con {blank} para target _blank
+  html = html.replace(/\[(.*?)\]\((.*?)(\s*\{blank\})?\)/g, (match, text, url, blank) => {
+    if (blank) {
+      return `<a href="${url}" target="_blank" rel="noopener">${text}</a>`;
+    } else {
+      return `<a href="${url}">${text}</a>`;
+    }
+  });
+
+  // Negritas y cursivas
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+             .replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+  // Listas no ordenadas
   html = html.replace(/(^|\n)[ ]*\* (.*?)(?=\n|$)/g, (match, p1, p2) => `${p1}<li>${p2}</li>`);
-  // Agrupar <li> en <ul>
   html = html.replace(/(<li>.*?<\/li>\s*)+/g, match => `<ul>${match.replace(/\n/g, '')}</ul>`);
 
-  // Procesar listas ordenadas
+  // Listas ordenadas
   html = html.replace(/(^|\n)[ ]*\d+\. (.*?)(?=\n|$)/g, (match, p1, p2) => `${p1}<li>${p2}</li>`);
   html = html.replace(/(<li>.*?<\/li>\s*)+/g, match => `<ol>${match.replace(/\n/g, '')}</ol>`);
 
-  // Procesar párrafos (líneas que no son títulos ni listas)
-  html = html.replace(/(^|\n)(?!<h\d|<ul>|<ol>|<li>|<\/ul>|<\/ol>|<\/li>|<p>|<\/p>)([^<\n][^\n]*)/g, (m, p1, p2) => `<p>${p2.trim()}</p>`);
+  // Párrafos
+  html = html.replace(/(^|\n)(?!<h\d|<ul>|<ol>|<li>|<\/ul>|<\/ol>|<\/li>|<p>|<\/p>|<blockquote>|<\/blockquote>)([^<\n][^\n]*)/g, (m, p1, p2) => `<p>${p2.trim()}</p>`);
 
-  // Limpiar <p> duplicados alrededor de listas y títulos
-  html = html.replace(/<p>(\s*)<(h\d|ul|ol)>/g, '<$2>');
-  html = html.replace(/<\/(h\d|ul|ol)>(\s*)<\/p>/g, '</$1>');
+  // Limpiar <p> duplicados alrededor de listas, títulos y blockquotes
+  html = html.replace(/<p>(\s*)<(h\d|ul|ol|blockquote)>/g, '<$2>');
+  html = html.replace(/<\/(h\d|ul|ol|blockquote)>(\s*)<\/p>/g, '</$1>');
 
   return html;
 }
